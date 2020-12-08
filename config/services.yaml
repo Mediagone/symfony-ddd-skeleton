@@ -3,7 +3,26 @@
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+imports:
+    - { resource: services-domain.yaml }
+    - { resource: services-infrastructure.yaml }
+    - { resource: services-ui.yaml }
+
 parameters:
+    env(APP_DOMAIN): ''
+
+    # Extra parameters
+    locale: en
+    date_format: Y M j, H:i
+    date_interval_format: '%%d days'
+    date_timezone: Europe/Paris
+
+    number_format_decimals: 2
+    number_format_decimal_point: '.'
+    number_format_thousands_separator: ','
+
+    bytes_format_units: ['b', 'Kb', 'Mb', 'Gb', 'Tb']
+
 
 services:
     # default configuration for services in *this* file
@@ -11,21 +30,9 @@ services:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
-    # makes classes in src/ available to be used as services
-    # this creates a service per class whose id is the fully-qualified class name
-    App\:
-        resource: '../src/'
-        exclude:
-            - '../src/DependencyInjection/'
-            - '../src/Entity/'
-            - '../src/Kernel.php'
-            - '../src/Tests/'
 
-    # controllers are imported separately to make sure services can be injected
-    # as action arguments even if you don't extend any base controller class
-    App\Controller\:
-        resource: '../src/Controller/'
-        tags: ['controller.service_arguments']
 
-    # add more service definitions when explicit configuration is needed
-    # please note that last definitions always *replace* previous ones
+
+    #-------------------------------------------------------------------------------------------------------------------
+    # Add more service definitions when explicit configuration is needed
+    #-------------------------------------------------------------------------------------------------------------------

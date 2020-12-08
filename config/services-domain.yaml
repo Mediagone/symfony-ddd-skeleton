@@ -1,0 +1,10 @@
+services:
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+
+    # Loads all Domain's classes as services
+    App\Domain\:
+        resource: ../src/Domain
+

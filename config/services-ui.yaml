@@ -1,0 +1,15 @@
+services:
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+
+    # Tag controllers classes to make sure services can be injected as action arguments.
+    App\UI\:
+        resource: '../src/UI/*/Pages/'
+        tags: ['controller.service_arguments']
+
+
+    # Loads all Shared classes as services
+    App\UI\Shared\:
+        resource: ../src/UI/Shared/

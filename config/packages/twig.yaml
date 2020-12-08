@@ -1,2 +1,18 @@
 twig:
-    default_path: '%kernel.project_dir%/templates'
+    default_path: '%kernel.project_dir%/src/UI'
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+
+    date:
+        format: "%date_format%"
+        interval_format: "%date_interval_format%"
+        timezone: "%date_timezone%"
+
+    number_format:
+        decimals: "%number_format_decimals%"
+        decimal_point: "%number_format_decimal_point%"
+        thousands_separator: "%number_format_thousands_separator%"
+
+    globals:
+        locale: "%locale%"
+        title_separator: " | "
