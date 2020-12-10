@@ -5,6 +5,7 @@
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
         <title>{% block HEAD_TITLE %}{{ title_separator }}{{ 'app_name'|trans }}{% endblock %}</title>
         <meta name="description" content="{% block HEAD_DESCRIPTION %}{% endblock %}">
+        {% block HEAD_STYLESHEET %}{% endblock %}
         {% block HEAD_EXTRA %}{% endblock %}
     </head>
     <body>
