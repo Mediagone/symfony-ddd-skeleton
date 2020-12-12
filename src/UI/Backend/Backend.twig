@@ -1,12 +1,12 @@
 {% extends 'Shared/Layouts/Base.twig' %}
 
+{% use_css '/static/backend.css' %}
+{% use_css '/static/bootstrap/css/custom.min.css' %}
+{% use_js '/static/bootstrap/js/custom.min.js' %}
+
+
 {% block BODY_CONTENT %}
     <main>
         {% block MAIN_CONTENT %}{% endblock %}
     </main>
-{% endblock %}
-
-
-{% block HEAD_STYLESHEET %}
-    <link rel="stylesheet" href="/static/backend.css">
 {% endblock %}

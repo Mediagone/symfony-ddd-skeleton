@@ -5,10 +5,16 @@
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
         <title>{% block HEAD_TITLE %}{{ title_separator }}{{ 'app_name'|trans }}{% endblock %}</title>
         <meta name="description" content="{% block HEAD_DESCRIPTION %}{% endblock %}">
-        {% block HEAD_STYLESHEET %}{% endblock %}
+{% for css in stylesheets() %}
+        <link rel="stylesheet" href="{{ css }}" />
+{% endfor %}
         {% block HEAD_EXTRA %}{% endblock %}
     </head>
     <body>
         {% block BODY_CONTENT %}{% endblock %}
+
+{% for js in javascripts() %}
+        <script src="{{ js }}"></script>
+{% endfor %}
     </body>
 </html>

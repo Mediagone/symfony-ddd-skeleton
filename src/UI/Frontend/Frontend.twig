@@ -1,12 +1,10 @@
 {% extends 'Shared/Layouts/Base.twig' %}
 
+{% use_css '/static/frontend.css' %}
+
+
 {% block BODY_CONTENT %}
     <main>
         {% block MAIN_CONTENT %}{% endblock %}
     </main>
-{% endblock %}
-
-
-{% block HEAD_STYLESHEET %}
-    <link rel="stylesheet" href="/static/frontend.css">
 {% endblock %}
