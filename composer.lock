@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a3a8cb254eb5b7d6405462df24cdfe2",
+    "content-hash": "62e5b83cb11c76aa6280e12c8ed7e0d7",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1662,6 +1662,58 @@
                 }
             ],
             "time": "2020-09-14T14:23:00+00:00"
+        },
+        {
+            "name": "mediagone/ddd-doctrine-specifications",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Mediagone/ddd-doctrine-specifications.git",
+                "reference": "0448f1a30056cbb52b69fb84c3c087ebd1653d0d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Mediagone/ddd-doctrine-specifications/zipball/0448f1a30056cbb52b69fb84c3c087ebd1653d0d",
+                "reference": "0448f1a30056cbb52b69fb84c3c087ebd1653d0d",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/orm": "^2.7",
+                "php": "^7.4",
+                "symfony/var-dumper": "^5.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mediagone\\DDD\\Doctrine\\Specifications\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruce Suire",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Doctrine implementation of repository Specifications pattern",
+            "keywords": [
+                "Specifications",
+                "database",
+                "doctrine",
+                "orm",
+                "repository"
+            ],
+            "support": {
+                "issues": "https://github.com/Mediagone/ddd-doctrine-specifications/issues",
+                "source": "https://github.com/Mediagone/ddd-doctrine-specifications/tree/0.1.1"
+            },
+            "time": "2020-12-05T17:49:58+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -9635,7 +9687,8 @@
     "platform": {
         "php-64bit": "^7.4",
         "ext-ctype": "*",
-        "ext-iconv": "*"
+        "ext-iconv": "*",
+        "ext-json": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"

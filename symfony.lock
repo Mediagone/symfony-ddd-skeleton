@@ -90,6 +90,9 @@
     "laminas/laminas-zendframework-bridge": {
         "version": "1.1.1"
     },
+    "mediagone/ddd-doctrine-specifications": {
+        "version": "0.1.1"
+    },
     "monolog/monolog": {
         "version": "2.1.1"
     },
