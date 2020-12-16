@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62e5b83cb11c76aa6280e12c8ed7e0d7",
+    "content-hash": "374752c29a0fdf06866e3eb10d4e6698",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1664,16 +1664,70 @@
             "time": "2020-09-14T14:23:00+00:00"
         },
         {
-            "name": "mediagone/ddd-doctrine-specifications",
+            "name": "mediagone/cqrs-bus",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Mediagone/cqrs-bus.git",
+                "reference": "10577061b5c8ef1addaa50d211b70cbce375b861"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Mediagone/cqrs-bus/zipball/10577061b5c8ef1addaa50d211b70cbce375b861",
+                "reference": "10577061b5c8ef1addaa50d211b70cbce375b861",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/orm": "^2.7",
+                "mediagone/doctrine-specifications": "^0.1",
+                "php": "^7.4",
+                "symfony/dependency-injection": "^5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mediagone\\CQRS\\Bus\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruce Suire"
+                }
+            ],
+            "description": "DDD ready implementation of Command, Event and Query bus.",
+            "keywords": [
+                "bus",
+                "command",
+                "cqrs",
+                "ddd",
+                "event",
+                "middleware",
+                "query"
+            ],
+            "support": {
+                "issues": "https://github.com/Mediagone/cqrs-bus/issues",
+                "source": "https://github.com/Mediagone/cqrs-bus/tree/0.2.0"
+            },
+            "time": "2020-12-16T13:10:04+00:00"
+        },
+        {
+            "name": "mediagone/doctrine-specifications",
             "version": "0.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Mediagone/ddd-doctrine-specifications.git",
+                "url": "https://github.com/Mediagone/doctrine-specifications.git",
                 "reference": "0448f1a30056cbb52b69fb84c3c087ebd1653d0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediagone/ddd-doctrine-specifications/zipball/0448f1a30056cbb52b69fb84c3c087ebd1653d0d",
+                "url": "https://api.github.com/repos/Mediagone/doctrine-specifications/zipball/0448f1a30056cbb52b69fb84c3c087ebd1653d0d",
                 "reference": "0448f1a30056cbb52b69fb84c3c087ebd1653d0d",
                 "shasum": ""
             },
@@ -1710,23 +1764,23 @@
                 "repository"
             ],
             "support": {
-                "issues": "https://github.com/Mediagone/ddd-doctrine-specifications/issues",
-                "source": "https://github.com/Mediagone/ddd-doctrine-specifications/tree/0.1.1"
+                "issues": "https://github.com/Mediagone/doctrine-specifications/issues",
+                "source": "https://github.com/Mediagone/doctrine-specifications/tree/0.1.1"
             },
             "time": "2020-12-05T17:49:58+00:00"
         },
         {
             "name": "monolog/monolog",
-            "version": "2.1.1",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "f9eee5cec93dfb313a38b6b288741e84e53f02d5"
+                "reference": "1cb1cde8e8dd0f70cc0fe51354a59acad9302084"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/f9eee5cec93dfb313a38b6b288741e84e53f02d5",
-                "reference": "f9eee5cec93dfb313a38b6b288741e84e53f02d5",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1cb1cde8e8dd0f70cc0fe51354a59acad9302084",
+                "reference": "1cb1cde8e8dd0f70cc0fe51354a59acad9302084",
                 "shasum": ""
             },
             "require": {
@@ -1739,16 +1793,17 @@
             "require-dev": {
                 "aws/aws-sdk-php": "^2.4.9 || ^3.0",
                 "doctrine/couchdb": "~1.0@dev",
-                "elasticsearch/elasticsearch": "^6.0",
+                "elasticsearch/elasticsearch": "^7",
                 "graylog2/gelf-php": "^1.4.2",
+                "mongodb/mongodb": "^1.8",
                 "php-amqplib/php-amqplib": "~2.4",
                 "php-console/php-console": "^3.1.3",
-                "php-parallel-lint/php-parallel-lint": "^1.0",
                 "phpspec/prophecy": "^1.6.1",
+                "phpstan/phpstan": "^0.12.59",
                 "phpunit/phpunit": "^8.5",
                 "predis/predis": "^1.1",
                 "rollbar/rollbar": "^1.3",
-                "ruflin/elastica": ">=0.90 <3.0",
+                "ruflin/elastica": ">=0.90 <7.0.1",
                 "swiftmailer/swiftmailer": "^5.3|^6.0"
             },
             "suggest": {
@@ -1768,7 +1823,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-main": "2.x-dev"
                 }
             },
             "autoload": {
@@ -1784,11 +1839,11 @@
                 {
                     "name": "Jordi Boggiano",
                     "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
+                    "homepage": "https://seld.be"
                 }
             ],
             "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
-            "homepage": "http://github.com/Seldaek/monolog",
+            "homepage": "https://github.com/Seldaek/monolog",
             "keywords": [
                 "log",
                 "logging",
@@ -1796,7 +1851,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/2.1.1"
+                "source": "https://github.com/Seldaek/monolog/tree/2.2.0"
             },
             "funding": [
                 {
@@ -1808,7 +1863,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-23T08:41:23+00:00"
+            "time": "2020-12-14T13:15:25+00:00"
         },
         {
             "name": "ocramius/proxy-manager",

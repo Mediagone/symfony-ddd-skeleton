@@ -90,7 +90,10 @@
     "laminas/laminas-zendframework-bridge": {
         "version": "1.1.1"
     },
-    "mediagone/ddd-doctrine-specifications": {
+    "mediagone/cqrs-bus": {
+        "version": "0.1.0"
+    },
+    "mediagone/doctrine-specifications": {
         "version": "0.1.1"
     },
     "monolog/monolog": {
