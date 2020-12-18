@@ -47,6 +47,7 @@
         "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.4",
         "phpunit/phpunit": "^9.5",
         "symfony/browser-kit": "^5.2",
         "symfony/css-selector": "^5.2",
@@ -90,6 +91,7 @@
             "@auto-scripts"
         ],
         "phpunit": "phpunit -c phpunit.xml.dist --testsuite Unit_Tests"
+        "dbfixtures": "php bin/console doctrine:fixtures:load -n",
     },
     "conflict": {
         "symfony/symfony": "*"
