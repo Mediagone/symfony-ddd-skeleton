@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1a17ac24e0b6ecf04c8070c4a06d193",
+    "content-hash": "30e2b00e30909148d1b24f9d01adf02e",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1665,16 +1665,16 @@
         },
         {
             "name": "mediagone/cqrs-bus",
-            "version": "0.2.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediagone/cqrs-bus.git",
-                "reference": "10577061b5c8ef1addaa50d211b70cbce375b861"
+                "reference": "5d4d29e50741f183d1cafdf150261de49921ad55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediagone/cqrs-bus/zipball/10577061b5c8ef1addaa50d211b70cbce375b861",
-                "reference": "10577061b5c8ef1addaa50d211b70cbce375b861",
+                "url": "https://api.github.com/repos/Mediagone/cqrs-bus/zipball/5d4d29e50741f183d1cafdf150261de49921ad55",
+                "reference": "5d4d29e50741f183d1cafdf150261de49921ad55",
                 "shasum": ""
             },
             "require": {
@@ -1713,22 +1713,22 @@
             ],
             "support": {
                 "issues": "https://github.com/Mediagone/cqrs-bus/issues",
-                "source": "https://github.com/Mediagone/cqrs-bus/tree/0.2.0"
+                "source": "https://github.com/Mediagone/cqrs-bus/tree/0.4.0"
             },
-            "time": "2020-12-16T13:10:04+00:00"
+            "time": "2020-12-16T18:31:51+00:00"
         },
         {
             "name": "mediagone/doctrine-specifications",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediagone/doctrine-specifications.git",
-                "reference": "0448f1a30056cbb52b69fb84c3c087ebd1653d0d"
+                "reference": "e7639bed4ed849604a6a7e4c86e9c7769c5f3d4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediagone/doctrine-specifications/zipball/0448f1a30056cbb52b69fb84c3c087ebd1653d0d",
-                "reference": "0448f1a30056cbb52b69fb84c3c087ebd1653d0d",
+                "url": "https://api.github.com/repos/Mediagone/doctrine-specifications/zipball/e7639bed4ed849604a6a7e4c86e9c7769c5f3d4e",
+                "reference": "e7639bed4ed849604a6a7e4c86e9c7769c5f3d4e",
                 "shasum": ""
             },
             "require": {
@@ -1742,7 +1742,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Mediagone\\DDD\\Doctrine\\Specifications\\": "src/"
+                    "Mediagone\\Doctrine\\Specifications\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1765,9 +1765,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Mediagone/doctrine-specifications/issues",
-                "source": "https://github.com/Mediagone/doctrine-specifications/tree/0.1.1"
+                "source": "https://github.com/Mediagone/doctrine-specifications/tree/0.1.2"
             },
-            "time": "2020-12-05T17:49:58+00:00"
+            "time": "2020-12-15T02:12:56+00:00"
         },
         {
             "name": "monolog/monolog",
