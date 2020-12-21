@@ -105,6 +105,9 @@
     "laminas/laminas-zendframework-bridge": {
         "version": "1.1.1"
     },
+    "mediagone/common-types": {
+        "version": "dev-main"
+    },
     "mediagone/cqrs-bus": {
         "version": "0.1.0"
     },
