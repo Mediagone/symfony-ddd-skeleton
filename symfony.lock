@@ -111,6 +111,9 @@
     "mediagone/cqrs-bus": {
         "version": "0.1.0"
     },
+    "mediagone/doctrine-common-types": {
+        "version": "0.1.0"
+    },
     "mediagone/doctrine-specifications": {
         "version": "0.1.1"
     },
