@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "25b082b7198011779b92997eaac87cfa",
+    "content-hash": "dddab77d7092df224668a31134e5ffbe",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1713,6 +1713,58 @@
             "time": "2020-12-22T01:13:02+00:00"
         },
         {
+            "name": "mediagone/common-types-doctrine",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Mediagone/common-types-doctrine.git",
+                "reference": "472260c5a3c3b504c74a17e1a19743533c0c6483"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Mediagone/common-types-doctrine/zipball/472260c5a3c3b504c74a17e1a19743533c0c6483",
+                "reference": "472260c5a3c3b504c74a17e1a19743533c0c6483",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^2.7",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "mediagone/common-types": "^0.2",
+                "php": "^7.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mediagone\\Doctrine\\Common\\Types\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruce Suire"
+                }
+            ],
+            "description": "Doctrine types for mediagone/common-types package.",
+            "keywords": [
+                "ddd",
+                "doctrine",
+                "type",
+                "value objects"
+            ],
+            "support": {
+                "issues": "https://github.com/Mediagone/common-types-doctrine/issues",
+                "source": "https://github.com/Mediagone/common-types-doctrine/tree/0.1.0"
+            },
+            "time": "2020-12-22T01:40:37+00:00"
+        },
+        {
             "name": "mediagone/cqrs-bus",
             "version": "0.4.0",
             "source": {
@@ -1767,58 +1819,6 @@
             "time": "2020-12-16T18:31:51+00:00"
         },
         {
-            "name": "mediagone/doctrine-common-types",
-            "version": "0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Mediagone/doctrine-common-types.git",
-                "reference": "472260c5a3c3b504c74a17e1a19743533c0c6483"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Mediagone/doctrine-common-types/zipball/472260c5a3c3b504c74a17e1a19743533c0c6483",
-                "reference": "472260c5a3c3b504c74a17e1a19743533c0c6483",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/dbal": "^2.7",
-                "ext-json": "*",
-                "ext-mbstring": "*",
-                "mediagone/common-types": "^0.2",
-                "php": "^7.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Mediagone\\Doctrine\\Common\\Types\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bruce Suire"
-                }
-            ],
-            "description": "Doctrine types for mediagone/common-types package.",
-            "keywords": [
-                "ddd",
-                "doctrine",
-                "type",
-                "value objects"
-            ],
-            "support": {
-                "issues": "https://github.com/Mediagone/doctrine-common-types/issues",
-                "source": "https://github.com/Mediagone/doctrine-common-types/tree/0.1.0"
-            },
-            "time": "2020-12-22T01:40:37+00:00"
-        },
-        {
             "name": "mediagone/doctrine-specifications",
             "version": "0.1.2",
             "source": {
@@ -1869,6 +1869,55 @@
                 "source": "https://github.com/Mediagone/doctrine-specifications/tree/0.1.2"
             },
             "time": "2020-12-15T02:12:56+00:00"
+        },
+        {
+            "name": "mediagone/twig-powerpack",
+            "version": "0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Mediagone/twig-powerpack.git",
+                "reference": "e6d4d73ea8133d2db054a72fe0358f76366b06f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Mediagone/twig-powerpack/zipball/e6d4d73ea8133d2db054a72fe0358f76366b06f0",
+                "reference": "e6d4d73ea8133d2db054a72fe0358f76366b06f0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4",
+                "twig/twig": "^2.12|^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mediagone\\Twig\\PowerPack\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruce Suire",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Provides type-safety and useful helpers to your Twig templates.",
+            "keywords": [
+                "extension",
+                "quality",
+                "twig"
+            ],
+            "support": {
+                "issues": "https://github.com/Mediagone/twig-powerpack/issues",
+                "source": "https://github.com/Mediagone/twig-powerpack/tree/0.1.2"
+            },
+            "time": "2021-01-03T23:33:11+00:00"
         },
         {
             "name": "monolog/monolog",

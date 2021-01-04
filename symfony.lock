@@ -108,14 +108,17 @@
     "mediagone/common-types": {
         "version": "dev-main"
     },
-    "mediagone/cqrs-bus": {
+    "mediagone/common-types-doctrine": {
         "version": "0.1.0"
     },
-    "mediagone/doctrine-common-types": {
+    "mediagone/cqrs-bus": {
         "version": "0.1.0"
     },
     "mediagone/doctrine-specifications": {
         "version": "0.1.1"
+    },
+    "mediagone/twig-powerpack": {
+        "version": "0.1.0"
     },
     "monolog/monolog": {
         "version": "2.1.1"
