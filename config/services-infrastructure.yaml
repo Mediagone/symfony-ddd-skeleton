@@ -4,6 +4,87 @@ services:
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
 
+    # Defines CQRS classes as handlers, listeners and fetchers
+    _instanceof:
+        Mediagone\CQRS\Bus\Domain\Command\CommandHandler:
+            tags: [ 'app.command_handler' ]
+        Mediagone\CQRS\Bus\Domain\Event\EventListener:
+            tags: [ 'app.event_listener' ]
+        Mediagone\CQRS\Bus\Domain\Query\QueryFetcher:
+            tags: [ 'app.query_fetcher' ]
+
+
     # Loads all Infrastructure's classes as services
     App\Infrastructure\:
         resource: ../src/Infrastructure/
+
+
+    #-------------------------------------------------------------------------------------------------------------------
+    # Command Bus
+    #-------------------------------------------------------------------------------------------------------------------
+
+    # Declare the command bus as a service.
+    Mediagone\CQRS\Bus\Domain\Command\CommandBus: '@app.command_bus.1_queue'
+
+    app.command_bus.1_queue:
+        class: Mediagone\CQRS\Bus\Infrastructure\Command\CommandBusQueue
+        arguments: ['@app.command_bus.2_event_collector']
+
+    app.command_bus.2_event_collector:
+        class: Mediagone\CQRS\Bus\Infrastructure\Command\CommandBusEventCollector
+        arguments: ['@app.command_bus.3_database_transaction', '@app.event_bus.1_collector']
+
+    app.command_bus.3_database_transaction:
+        class: Mediagone\CQRS\Bus\Infrastructure\Command\CommandBusDatabaseTransactionWrapper
+        arguments: ['@app.command_bus.4_suffix_resolver']
+
+    app.command_bus.4_suffix_resolver:
+        class: Mediagone\CQRS\Bus\Infrastructure\Command\CommandBusSuffixResolver
+        arguments:
+            $serviceLocator: !tagged_locator { tag: 'app.command_handler' }
+            $suffix: '_Handler'
+            $next: null
+
+
+
+    #-------------------------------------------------------------------------------------------------------------------
+    # Event Bus
+    #-------------------------------------------------------------------------------------------------------------------
+
+    # Declare the event bus as a service.
+    Mediagone\CQRS\Bus\Domain\Event\EventBus: '@app.event_bus.1_collector'
+
+    app.event_bus.1_collector:
+        class: Mediagone\CQRS\Bus\Infrastructure\Event\EventBusQueue
+        arguments: ['@app.event_bus.2_final']
+
+    app.event_bus.2_final:
+        class: Mediagone\CQRS\Bus\Infrastructure\Event\EventBusDispatcher
+        tags: ['app.event_listeners_injection']
+        arguments:
+            $listeners: []
+
+
+
+    #-------------------------------------------------------------------------------------------------------------------
+    # Query Bus
+    #-------------------------------------------------------------------------------------------------------------------
+
+    # Declare the query bus as a service.
+    Mediagone\CQRS\Bus\Domain\Query\QueryBus: '@app.query_bus.1_suffix_resolver'
+
+    app.query_bus.1_suffix_resolver:
+        class: Mediagone\CQRS\Bus\Infrastructure\Query\QueryBusSuffixResolver
+        arguments:
+            $serviceLocator: !tagged_locator { tag: 'app.query_fetcher' }
+            $suffix: '_Fetcher'
+            $next: '@app.query_bus.2_specifications_resolver'
+
+    app.query_bus.2_specifications_resolver:
+        class: Mediagone\CQRS\Bus\Infrastructure\Query\QueryBusSpecificationResolver
+        arguments:
+            $repository: '@app.query_specification_repository'
+            $next: null
+
+    app.query_specification_repository:
+        class: Mediagone\Doctrine\Specifications\SpecificationRepository
