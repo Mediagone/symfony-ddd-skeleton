@@ -93,7 +93,7 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
-        "phpunit": "phpunit -c phpunit.xml.dist --testsuite Unit_Tests"
+        "tests": "phpunit -c phpunit.xml.dist --testsuite Unit_Tests",
         "dbfixtures": "php bin/console doctrine:fixtures:load -n",
     },
     "conflict": {
