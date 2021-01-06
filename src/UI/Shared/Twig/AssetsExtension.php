@@ -48,8 +48,6 @@ final class AssetsExtension extends AbstractExtension
     public function getFunctions() : array
     {
         return [
-            new TwigFunction('stylesheets', [$this, 'getStylesheets']),
-            new TwigFunction('javascripts', [$this, 'getJavascripts']),
         ];
     }
     
@@ -57,8 +55,6 @@ final class AssetsExtension extends AbstractExtension
     public function getTokenParsers() : array
     {
         return [
-            new UseCssTokenParser(),
-            new UseJsTokenParser(),
         ];
     }
     
