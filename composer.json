@@ -18,7 +18,7 @@
         "mediagone/common-types-doctrine": "^0.1.0",
         "mediagone/cqrs-bus": "^0.4",
         "mediagone/doctrine-specifications": "^0.1",
-        "mediagone/twig-powerpack": "^0.1.0",
+        "mediagone/twig-powerpack": "^0.2",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^5.1",
         "symfony/asset": "5.2.*",

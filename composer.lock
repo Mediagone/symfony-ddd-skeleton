@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dddab77d7092df224668a31134e5ffbe",
+    "content-hash": "52f694bfc35f9c7682e228af36ee6620",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1872,16 +1872,16 @@
         },
         {
             "name": "mediagone/twig-powerpack",
-            "version": "0.1.3",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediagone/twig-powerpack.git",
-                "reference": "d59fd53ece350924887465c2b6b7a81264614873"
+                "reference": "031da77300fafbfd7fdcda67e15c853fd4752b06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediagone/twig-powerpack/zipball/d59fd53ece350924887465c2b6b7a81264614873",
-                "reference": "d59fd53ece350924887465c2b6b7a81264614873",
+                "url": "https://api.github.com/repos/Mediagone/twig-powerpack/zipball/031da77300fafbfd7fdcda67e15c853fd4752b06",
+                "reference": "031da77300fafbfd7fdcda67e15c853fd4752b06",
                 "shasum": ""
             },
             "require": {
@@ -1915,9 +1915,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Mediagone/twig-powerpack/issues",
-                "source": "https://github.com/Mediagone/twig-powerpack/tree/0.1.3"
+                "source": "https://github.com/Mediagone/twig-powerpack/tree/0.2.0"
             },
-            "time": "2021-01-05T22:24:45+00:00"
+            "time": "2021-01-07T19:33:27+00:00"
         },
         {
             "name": "monolog/monolog",
