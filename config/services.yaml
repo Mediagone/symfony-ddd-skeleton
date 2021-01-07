@@ -9,8 +9,14 @@ imports:
     - { resource: services-ui.yaml }
 
 parameters:
+    # Default env parameters
     env(APP_DOMAIN): ''
-
+    
+    
+    # Env parameters
+    app_domain: '%env(APP_DOMAIN)%'
+    
+    
     # Extra parameters
     locale: en
     date_format: Y M j, H:i
