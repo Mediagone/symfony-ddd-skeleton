@@ -94,7 +94,19 @@
             "@auto-scripts"
         ],
         "tests": "phpunit -c phpunit.xml.dist --testsuite Unit_Tests",
+        "dbupdate": "php bin/console doctrine:schema:update --force",
         "dbfixtures": "php bin/console doctrine:fixtures:load -n",
+        "dbinit": [
+            "php bin/console doctrine:database:drop --if-exists --force",
+            "php bin/console doctrine:database:create",
+            "php bin/console doctrine:schema:create",
+            "composer dbfixtures"
+        ],
+        "dbinit-test": [
+            "php bin/console doctrine:database:drop --if-exists --force --env=test",
+            "php bin/console doctrine:database:create --env=test",
+            "php bin/console doctrine:schema:create --env=test"
+        ]
     },
     "conflict": {
         "symfony/symfony": "*"
