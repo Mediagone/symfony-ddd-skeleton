@@ -3,10 +3,12 @@
 namespace App\Infrastructure\Fixtures;
 
 use App\Domain\Core\Account\Account;
-use App\Domain\Core\Account\AccountId;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
-use function password_hash;
+use Mediagone\Common\Types\Crypto\HashBcrypt;
+use Mediagone\Common\Types\Text\Name;
+use Mediagone\Common\Types\Web\EmailAddress;
+use Symfony\Component\Uid\Ulid;
 
 
 final class AccountFixtures extends Fixture
@@ -29,10 +31,10 @@ final class AccountFixtures extends Fixture
     public function load(ObjectManager $em) : void
     {
         $account = new Account(
-            AccountId::fromString('01ESTQSNZDJCC5GGVZ1PBYJQER'),
-            'Admin',
-            'admin@dev.com',
-            password_hash('pass', PASSWORD_BCRYPT, ['cost' => 14])
+            new Ulid('01ESTQSNZDJCC5GGVZ1PBYJQER'),
+            Name::fromString('Admin'),
+            EmailAddress::fromString('admin@dev.com'),
+            HashBcrypt::fromString('pass')
         );
         $em->persist($account);
         
