@@ -18,7 +18,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 /**
  * @Route("/login", name="security_login", methods={"GET","POST"})
  */
-final class Login
+final class LoginAction
 {
     //========================================================================================================
     // Properties
@@ -48,13 +48,13 @@ final class Login
 
     public function __invoke(?UserInterface $user, ControllerResponses $responses, AuthenticationUtils $authenticationUtils) : Response
     {
-        $error = $this->auth->getLastAuthenticationError();
-        
         if ($user !== null) {
             return $responses->seeOtherRedirection('backend_dashboard');
         }
         
         $this->handleAuthenticationError();
+        
+        $username = $this->auth->getLastUsername();
         
         return $responses->template('Security/Pages/Login.twig', [
             'HEADER' => new PageHeader(null),
