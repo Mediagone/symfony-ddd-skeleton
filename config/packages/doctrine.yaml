@@ -8,6 +8,7 @@ doctrine:
 
         types:
             # Add your custom Doctrine types here
+            app_hash: Mediagone\Doctrine\Common\Types\Crypto\HashType
             app_hashbcrypt: Mediagone\Doctrine\Common\Types\Crypto\HashBcryptType
             app_name: Mediagone\Doctrine\Common\Types\Text\NameType
             app_email: Mediagone\Doctrine\Common\Types\Web\EmailAddressType

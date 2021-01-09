@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\Id;
 use Doctrine\ORM\Mapping\Table;
-use Mediagone\Common\Types\Crypto\HashBcrypt;
+use Mediagone\Common\Types\Crypto\Hash;
 use Mediagone\Common\Types\Text\Name;
 use Mediagone\Common\Types\Web\EmailAddress;
 use Symfony\Component\Uid\Ulid;
@@ -52,10 +52,10 @@ final class Account
     }
     
     
-    /** @Column(type="app_hashbcrypt") */
-    private HashBcrypt $password;
+    /** @Column(type="app_hash") */
+    private Hash $password;
     
-    public function getPassword() : HashBcrypt
+    public function getPassword() : Hash
     {
         return $this->password;
     }
@@ -66,7 +66,7 @@ final class Account
     // Constructor
     //========================================================================================================
     
-    public function __construct(Ulid $id, Name $name, EmailAddress $email, HashBcrypt $password)
+    public function __construct(Ulid $id, Name $name, EmailAddress $email, Hash $password)
     {
         $this->id = $id;
         $this->name = $name;

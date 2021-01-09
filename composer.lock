@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "52f694bfc35f9c7682e228af36ee6620",
+    "content-hash": "be5fde21d0d8fe7bd871b8d35d80ad4b",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1665,16 +1665,16 @@
         },
         {
             "name": "mediagone/common-types",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediagone/common-types.git",
-                "reference": "33393a7a58bf16430541ed926814fc9104c63513"
+                "reference": "9274a3143926854b38395fbbd237c821060cd541"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediagone/common-types/zipball/33393a7a58bf16430541ed926814fc9104c63513",
-                "reference": "33393a7a58bf16430541ed926814fc9104c63513",
+                "url": "https://api.github.com/repos/Mediagone/common-types/zipball/9274a3143926854b38395fbbd237c821060cd541",
+                "reference": "9274a3143926854b38395fbbd237c821060cd541",
                 "shasum": ""
             },
             "require": {
@@ -1708,29 +1708,29 @@
             ],
             "support": {
                 "issues": "https://github.com/Mediagone/common-types/issues",
-                "source": "https://github.com/Mediagone/common-types/tree/0.2.0"
+                "source": "https://github.com/Mediagone/common-types/tree/0.3.0"
             },
-            "time": "2020-12-22T01:13:02+00:00"
+            "time": "2021-01-09T00:29:01+00:00"
         },
         {
             "name": "mediagone/common-types-doctrine",
-            "version": "0.1.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediagone/common-types-doctrine.git",
-                "reference": "472260c5a3c3b504c74a17e1a19743533c0c6483"
+                "reference": "4b02a4c90f09b6dfc5af3ae2f6bb0bec51ab835d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediagone/common-types-doctrine/zipball/472260c5a3c3b504c74a17e1a19743533c0c6483",
-                "reference": "472260c5a3c3b504c74a17e1a19743533c0c6483",
+                "url": "https://api.github.com/repos/Mediagone/common-types-doctrine/zipball/4b02a4c90f09b6dfc5af3ae2f6bb0bec51ab835d",
+                "reference": "4b02a4c90f09b6dfc5af3ae2f6bb0bec51ab835d",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^2.7",
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "mediagone/common-types": "^0.2",
+                "mediagone/common-types": "^0.3",
                 "php": "^7.4"
             },
             "require-dev": {
@@ -1751,7 +1751,7 @@
                     "name": "Bruce Suire"
                 }
             ],
-            "description": "Doctrine types for mediagone/common-types package.",
+            "description": "Provides Doctrine types for mediagone/common-types package.",
             "keywords": [
                 "ddd",
                 "doctrine",
@@ -1760,9 +1760,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Mediagone/common-types-doctrine/issues",
-                "source": "https://github.com/Mediagone/common-types-doctrine/tree/0.1.0"
+                "source": "https://github.com/Mediagone/common-types-doctrine/tree/0.3.0"
             },
-            "time": "2020-12-22T01:40:37+00:00"
+            "time": "2021-01-09T00:37:00+00:00"
         },
         {
             "name": "mediagone/cqrs-bus",
