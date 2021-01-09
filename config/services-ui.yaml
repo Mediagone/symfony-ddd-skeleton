@@ -1,8 +1,15 @@
+parameters:
+    security_login_route: 'security_login'
+    security_logout_route: 'security_logout'
+
 services:
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
+        bind:
+            $securityLoginRoute: '%security_login_route%'
+            
 
     # Tag controllers classes to make sure services can be injected as action arguments.
     App\UI\:
