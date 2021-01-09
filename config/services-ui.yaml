@@ -12,11 +12,25 @@ services:
             
 
     # Tag controllers classes to make sure services can be injected as action arguments.
-    App\UI\:
-        resource: '../src/UI/*/Pages/'
+    App\UI\Backend\Pages\:
+        resource: '../src/UI/Backend/Pages/'
         tags: ['controller.service_arguments']
 
+    App\UI\Frontend\Pages\:
+        resource: '../src/UI/Frontend/Pages/'
+        tags: ['controller.service_arguments']
 
-    # Loads all Shared classes as services
-    App\UI\Shared\:
-        resource: ../src/UI/Shared/
+    App\UI\Security\Pages\:
+        resource: '../src/UI/Security/Pages/'
+        tags: ['controller.service_arguments']
+
+    
+    # Load third-party Twig extensions.
+    Mediagone\Twig\PowerPack\TwigPowerPackExtension:
+        tags: [twig.extension]
+
+
+    # Loads some UI's classes as services
+    App\UI\:
+        resource: '../src/UI/*/Services'
+

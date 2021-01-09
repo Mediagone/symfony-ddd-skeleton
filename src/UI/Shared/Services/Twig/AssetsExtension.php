@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace App\UI\Shared\Twig;
+namespace App\UI\Shared\Services\Twig;
 
 use App\UI\Shared\Twig\Tags\UseCssTokenParser;
 use App\UI\Shared\Twig\Tags\UseJsTokenParser;
