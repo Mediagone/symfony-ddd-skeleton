@@ -1,0 +1,30 @@
+{% extends 'Shared/BaseLayout.twig' %}
+
+{% expect nullable 'App\\UI\\Shared\\Partials\\PageHeader' as HEADER %}
+
+{% register once '/static/theme/css/graindashboard.css' %}
+{% register once '/static/theme/js/graindashboard.js' %}
+{% register once '/static/theme/js/graindashboard.vendor.js' %}
+
+{#% register once 'has-sidebar' in 'bodyClasses' %#}
+
+
+{% block BODY_CONTENT %}
+
+    {% if HEADER != null %}
+        {% include 'Shared/Partials/PageHeader.twig' %}
+    {% endif %}
+    
+    <main class="main">
+        
+        {% if MENU != null %}
+            {% include 'Shared/Partials/PageMenu.twig' %}
+        {% endif %}
+        
+        <div class="content">
+            {% block PAGE_CONTENT %}{% endblock %}
+        </div>
+    </main>
+    
+    {#% include "Shared/Elements/NotificationPopups.twig" with {Domain: 'backend'} %#}
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'Shared/BaseLayout.twig' %}
+
+{% register once '/static/theme/css/graindashboard.css' %}
+{% register once '/static/theme/js/graindashboard.js' %}
+{% register once '/static/theme/js/graindashboard.vendor.js' %}
+
+{% register once 'fixed-width' in 'bodyClasses' %}
+
+
+{% block BODY_CONTENT %}
+
+    {% if HEADER is defined %}
+        {% include 'Shared/Partials/PageHeader.twig' %}
+    {% endif %}
+    
+    <main class="main">
+
+        {% if MENU != null %}
+            {% include 'Frontend/Partials/FrontendMenu.twig' %}
+        {% endif %}
+        
+        <div class="content">
+            {% block PAGE_CONTENT %}{% endblock %}
+            {% if FOOTER is defined %}
+                {% include 'Shared/Partials/PageFooter.twig' %}
+            {% endif %}
+        </div>
+    </main>
+    
+    {#% include "Shared/Elements/NotificationPopups.twig" with {Domain: 'frontend'} %#}
+{% endblock %}

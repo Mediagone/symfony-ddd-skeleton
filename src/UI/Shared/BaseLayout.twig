@@ -5,16 +5,17 @@
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
         <title>{% block HEAD_TITLE %}{{ title_separator }}{{ 'app_name'|trans }}{% endblock %}</title>
         <meta name="description" content="{% block HEAD_DESCRIPTION %}{% endblock %}">
-{% for css in stylesheets() %}
+        <link rel="shortcut icon" type="image/png" href="{% block HEAD_FAVICON %}/static/favicon.png{% endblock %}"/>
+        {% for css in registry('css') %}
         <link rel="stylesheet" href="{{ css }}" />
-{% endfor %}
+        {% endfor %}
         {% block HEAD_EXTRA %}{% endblock %}
     </head>
-    <body>
+    <body class="{% if MENU != null %}has-sidebar has-fixed-sidebar-and-header{% endif %} {{ registry('bodyClasses')|join(' ') }}">
         {% block BODY_CONTENT %}{% endblock %}
-
-{% for js in javascripts() %}
+        
+        {% for js in registry('js') %}
         <script src="{{ js }}"></script>
-{% endfor %}
+        {% endfor %}
     </body>
 </html>
