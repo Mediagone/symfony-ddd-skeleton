@@ -72,8 +72,8 @@ final class SecurityUserAuthenticator extends AbstractFormLoginAuthenticator
     public function getCredentials(Request $request) : array
     {
         $credentials = [
-            'email' => $request->request->get('_username'),
-            'password' => $request->request->get('_password'),
+            'email' => $request->request->get('username'),
+            'password' => $request->request->get('password'),
             'csrf_token' => $request->request->get('_csrf_token'),
         ];
         
