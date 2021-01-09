@@ -1665,16 +1665,16 @@
         },
         {
             "name": "mediagone/common-types",
-            "version": "0.3.0",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediagone/common-types.git",
-                "reference": "9274a3143926854b38395fbbd237c821060cd541"
+                "reference": "323baf285fa82797efa0eaa3f2e69c7a23e88625"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediagone/common-types/zipball/9274a3143926854b38395fbbd237c821060cd541",
-                "reference": "9274a3143926854b38395fbbd237c821060cd541",
+                "url": "https://api.github.com/repos/Mediagone/common-types/zipball/323baf285fa82797efa0eaa3f2e69c7a23e88625",
+                "reference": "323baf285fa82797efa0eaa3f2e69c7a23e88625",
                 "shasum": ""
             },
             "require": {
@@ -1708,22 +1708,22 @@
             ],
             "support": {
                 "issues": "https://github.com/Mediagone/common-types/issues",
-                "source": "https://github.com/Mediagone/common-types/tree/0.3.0"
+                "source": "https://github.com/Mediagone/common-types/tree/0.3.1"
             },
-            "time": "2021-01-09T00:29:01+00:00"
+            "time": "2021-01-09T12:27:41+00:00"
         },
         {
             "name": "mediagone/common-types-doctrine",
-            "version": "0.3.0",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediagone/common-types-doctrine.git",
-                "reference": "4b02a4c90f09b6dfc5af3ae2f6bb0bec51ab835d"
+                "reference": "7691156d39a04558464fd9f1ab78b2f9a43280a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediagone/common-types-doctrine/zipball/4b02a4c90f09b6dfc5af3ae2f6bb0bec51ab835d",
-                "reference": "4b02a4c90f09b6dfc5af3ae2f6bb0bec51ab835d",
+                "url": "https://api.github.com/repos/Mediagone/common-types-doctrine/zipball/7691156d39a04558464fd9f1ab78b2f9a43280a3",
+                "reference": "7691156d39a04558464fd9f1ab78b2f9a43280a3",
                 "shasum": ""
             },
             "require": {
@@ -1760,9 +1760,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Mediagone/common-types-doctrine/issues",
-                "source": "https://github.com/Mediagone/common-types-doctrine/tree/0.3.0"
+                "source": "https://github.com/Mediagone/common-types-doctrine/tree/0.3.1"
             },
-            "time": "2021-01-09T00:37:00+00:00"
+            "time": "2021-01-09T12:46:21+00:00"
         },
         {
             "name": "mediagone/cqrs-bus",
