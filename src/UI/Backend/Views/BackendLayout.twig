@@ -1,6 +1,6 @@
-{% extends 'Shared/BaseLayout.twig' %}
+{% extends 'Shared/Views/BaseLayout.twig' %}
 
-{% expect nullable 'App\\UI\\Shared\\Partials\\PageHeader' as HEADER %}
+{% expect nullable 'App\\UI\\Shared\\Views\\Components\\PageHeader' as HEADER %}
 
 {% register once '/static/theme/css/graindashboard.css' %}
 {% register once '/static/theme/js/graindashboard.js' %}
@@ -12,13 +12,13 @@
 {% block BODY_CONTENT %}
 
     {% if HEADER != null %}
-        {% include 'Shared/Partials/PageHeader.twig' %}
+        {% include 'Shared/Views/Components/PageHeader.twig' %}
     {% endif %}
     
     <main class="main">
         
         {% if MENU != null %}
-            {% include 'Shared/Partials/PageMenu.twig' %}
+            {% include 'Shared/Views/Components/PageMenu.twig' %}
         {% endif %}
         
         <div class="content">

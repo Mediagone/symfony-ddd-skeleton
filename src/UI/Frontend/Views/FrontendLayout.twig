@@ -1,4 +1,4 @@
-{% extends 'Shared/BaseLayout.twig' %}
+{% extends 'Shared/Views/BaseLayout.twig' %}
 
 {% register once '/static/theme/css/graindashboard.css' %}
 {% register once '/static/theme/js/graindashboard.js' %}
@@ -10,19 +10,19 @@
 {% block BODY_CONTENT %}
 
     {% if HEADER is defined %}
-        {% include 'Shared/Partials/PageHeader.twig' %}
+        {% include 'Shared/Views/Components/PageHeader.twig' %}
     {% endif %}
     
     <main class="main">
 
         {% if MENU != null %}
-            {% include 'Frontend/Partials/FrontendMenu.twig' %}
+            {% include 'Frontend/Views/Components/FrontendMenu.twig' %}
         {% endif %}
         
         <div class="content">
             {% block PAGE_CONTENT %}{% endblock %}
             {% if FOOTER is defined %}
-                {% include 'Shared/Partials/PageFooter.twig' %}
+                {% include 'Shared/Views/Components/PageFooter.twig' %}
             {% endif %}
         </div>
     </main>

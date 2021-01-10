@@ -2,9 +2,9 @@
 
 namespace App\UI\Frontend\Actions;
 
-use App\UI\Backend\Partials\BackendHeader;
-use App\UI\Frontend\Pages\SecurityLogin;
-use App\UI\Shared\Partials\PageHeader;
+use App\UI\Backend\Views\Components\BackendHeader;
+use App\UI\Frontend\Views\Pages\SecurityLogin;
+use App\UI\Shared\Views\Components\PageHeader;
 use App\UI\Shared\Services\ControllerFlashes;
 use App\UI\Shared\Services\ControllerResponses;
 use Symfony\Component\HttpFoundation\Response;
@@ -55,7 +55,7 @@ final class SecurityLoginAction
         
         $this->handleAuthenticationError();
         
-        return $responses->template('Frontend/Pages/SecurityLogin.twig', [
+        return $responses->template('Frontend/Views/Pages/SecurityLogin.twig', [
             'HEADER' => new PageHeader(null),
             'MENU' => null,
             'FOOTER' => new BackendHeader(),
