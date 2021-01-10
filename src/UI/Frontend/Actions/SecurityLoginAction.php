@@ -3,6 +3,7 @@
 namespace App\UI\Frontend\Actions;
 
 use App\UI\Backend\Partials\BackendHeader;
+use App\UI\Frontend\Pages\SecurityLogin;
 use App\UI\Shared\Partials\PageHeader;
 use App\UI\Shared\Services\ControllerFlashes;
 use App\UI\Shared\Services\ControllerResponses;
@@ -16,9 +17,9 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 
 /**
- * @Route("/login", name="security_login", methods={"GET","POST"})
+ * @Route("/login", name="frontend_security_login", methods={"GET","POST"})
  */
-final class LoginAction
+final class SecurityLoginAction
 {
     //========================================================================================================
     // Properties
@@ -54,18 +55,16 @@ final class LoginAction
         
         $this->handleAuthenticationError();
         
-        $username = $this->auth->getLastUsername();
-        
-        return $responses->template('Frontend/Pages/Security/Login.twig', [
+        return $responses->template('Frontend/Pages/SecurityLogin.twig', [
             'HEADER' => new PageHeader(null),
             'MENU' => null,
             'FOOTER' => new BackendHeader(),
-            'MODEL' => new Login('lastt'),
+            'MODEL' => new SecurityLogin($this->auth->getLastUsername()),
         ]);
     }
-
-
-
+    
+    
+    
     //========================================================================================================
     // Helpers
     //========================================================================================================

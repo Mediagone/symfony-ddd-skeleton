@@ -1,6 +1,6 @@
 parameters:
-    security_login_route: 'security_login'
-    security_logout_route: 'security_logout'
+    security_login_route: 'frontend_security_login'
+    security_logout_route: 'frontend_security_logout'
 
 services:
     _defaults:

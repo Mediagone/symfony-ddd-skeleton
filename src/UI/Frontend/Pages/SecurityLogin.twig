@@ -1,6 +1,6 @@
 {% extends 'Frontend/FrontendLayout.twig' %}
 
-{% expect 'App\\UI\\Frontend\\Pages\\Security\\Login' as MODEL %}
+{% expect 'App\\UI\\Frontend\\Pages\\SecurityLogin' as MODEL %}
 
 
 {% block HEAD_TITLE %}{{ 'login.title'|trans }}{{ parent() }}{% endblock %}
@@ -15,7 +15,7 @@
                     <div class="card-body">
                         <h4 class="card-title">{{ 'login.title'|trans }}</h4>
                         
-                        <form action="{{ path('security_login') }}" method="post">
+                        <form action="{{ path('frontend_security_login') }}" method="post">
                             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                             
                             <div class="form-group">
@@ -42,7 +42,7 @@
                                 <input type="submit" class="btn btn-primary btn-block" value="{{ 'login.sign_in'|trans }}" />
                             </div>
                             <div class="text-center mt-3 small">
-                                {{ 'login.no_account'|trans }} <a href="{{ path('security_register') }}">{{ 'login.sign_up'|trans }}</a>
+                                {{ 'login.no_account'|trans }} <a href="{{ path('frontend_security_register') }}">{{ 'login.sign_up'|trans }}</a>
                             </div>
                         </form>
                     </div>
