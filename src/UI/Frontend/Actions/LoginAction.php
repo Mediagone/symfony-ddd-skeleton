@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace App\UI\Security\Pages;
+namespace App\UI\Frontend\Actions;
 
 use App\UI\Backend\Partials\BackendHeader;
 use App\UI\Shared\Partials\PageHeader;
@@ -56,10 +56,11 @@ final class LoginAction
         
         $username = $this->auth->getLastUsername();
         
-        return $responses->template('Security/Pages/Login.twig', [
+        return $responses->template('Frontend/Pages/Security/Login.twig', [
             'HEADER' => new PageHeader(null),
             'MENU' => null,
             'FOOTER' => new BackendHeader(),
+            'MODEL' => new Login('lastt'),
         ]);
     }
 

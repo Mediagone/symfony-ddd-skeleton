@@ -12,16 +12,12 @@ services:
             
 
     # Tag controllers classes to make sure services can be injected as action arguments.
-    App\UI\Backend\Pages\:
-        resource: '../src/UI/Backend/Pages/'
+    App\UI\Backend\Actions\:
+        resource: '../src/UI/Backend/Actions/'
         tags: ['controller.service_arguments']
 
-    App\UI\Frontend\Pages\:
-        resource: '../src/UI/Frontend/Pages/'
-        tags: ['controller.service_arguments']
-
-    App\UI\Security\Pages\:
-        resource: '../src/UI/Security/Pages/'
+    App\UI\Frontend\Actions\:
+        resource: '../src/UI/Frontend/Actions/'
         tags: ['controller.service_arguments']
 
     

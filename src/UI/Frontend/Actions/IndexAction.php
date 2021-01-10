@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace App\UI\Frontend\Pages;
+namespace App\UI\Frontend\Actions;
 
 use App\UI\Backend\Partials\BackendHeader;
 use App\UI\Shared\Services\ControllerResponses;
