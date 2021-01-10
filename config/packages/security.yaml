@@ -12,7 +12,7 @@ security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         users_in_db:
-            id: App\UI\Security\Services\SecurityUserProvider
+            id: App\UI\Frontend\Services\SecurityUserProvider
         
     firewalls:
         dev:
@@ -25,7 +25,7 @@ security:
             
             guard:
                 authenticators:
-                    - App\UI\Security\Services\SecurityUserAuthenticator
+                    - App\UI\Frontend\Services\SecurityUserAuthenticator
             
             logout:
                 path: '%security_logout_route%'

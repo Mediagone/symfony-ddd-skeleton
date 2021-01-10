@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace App\UI\Security\Services;
+namespace App\UI\Frontend\Services;
 
 use App\Domain\Core\Account\Query\OneAccount;
-use App\UI\Security\SecurityUser;
+use App\UI\Frontend\SecurityUser;
 use Mediagone\Common\Types\Web\EmailAddress;
 use Mediagone\CQRS\Bus\Domain\Query\QueryBus;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
