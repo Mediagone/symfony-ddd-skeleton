@@ -1872,16 +1872,16 @@
         },
         {
             "name": "mediagone/twig-powerpack",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediagone/twig-powerpack.git",
-                "reference": "031da77300fafbfd7fdcda67e15c853fd4752b06"
+                "reference": "e9cfde6d1ac89a3c85404c44dd7da172cbbb1bf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediagone/twig-powerpack/zipball/031da77300fafbfd7fdcda67e15c853fd4752b06",
-                "reference": "031da77300fafbfd7fdcda67e15c853fd4752b06",
+                "url": "https://api.github.com/repos/Mediagone/twig-powerpack/zipball/e9cfde6d1ac89a3c85404c44dd7da172cbbb1bf5",
+                "reference": "e9cfde6d1ac89a3c85404c44dd7da172cbbb1bf5",
                 "shasum": ""
             },
             "require": {
@@ -1915,9 +1915,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Mediagone/twig-powerpack/issues",
-                "source": "https://github.com/Mediagone/twig-powerpack/tree/0.2.0"
+                "source": "https://github.com/Mediagone/twig-powerpack/tree/0.2.1"
             },
-            "time": "2021-01-07T19:33:27+00:00"
+            "time": "2021-01-12T13:48:59+00:00"
         },
         {
             "name": "monolog/monolog",
