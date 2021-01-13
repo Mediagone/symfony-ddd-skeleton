@@ -5,17 +5,25 @@
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
         <title>{% block HEAD_TITLE %}{{ title_separator }}{{ 'app_name'|trans }}{% endblock %}</title>
         <meta name="description" content="{% block HEAD_DESCRIPTION %}{% endblock %}">
-        <link rel="shortcut icon" type="image/png" href="{% block HEAD_FAVICON %}/static/favicon.png{% endblock %}"/>
         {% for css in registry('css') %}
         <link rel="stylesheet" href="{{ css }}" />
         {% endfor %}
-        {% block HEAD_EXTRA %}{% endblock %}
-    </head>
-    <body class="{% if MENU != null %}has-sidebar has-fixed-sidebar-and-header{% endif %} {{ registry('bodyClasses')|join(' ') }}">
-        {% block BODY_CONTENT %}{% endblock %}
-        
-        {% for js in registry('js') %}
-        <script src="{{ js }}"></script>
+        {% for head in registry('head') %}
+            {{ head|raw }}
         {% endfor %}
+    </head>
+    <body class="{{ registry('bodyClasses')|join(' ') }}">
+        <div class="wrapper">
+            {% block BODY_CONTENT %}{% endblock %}
+            
+            {% for js in registry('js') %}
+            <script src="{{ js }}"></script>
+            {% endfor %}
+            <script>
+            {% for js in registry('bodyJs') %}
+                 {{ js|raw }}
+            {% endfor %}
+            </script>
+        </div>
     </body>
 </html>
