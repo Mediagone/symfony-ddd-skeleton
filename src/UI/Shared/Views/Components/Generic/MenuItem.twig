@@ -1,0 +1,38 @@
+{% expect 'App\\UI\\Shared\\Views\\Components\\Generic\\MenuItem' as ITEM %}
+
+{% apply spaceless %}
+    {% if ITEM.header %}
+    <li class="header">
+        {% if ITEM.fa or PARENT is defined %}<i class="fa {{ ITEM.fa|default('') }}"></i>&nbsp;{% endif %}
+        <span>{{ ITEM.header }}</span>
+    </li>
+    {% else %}
+        <li class="{% if ITEM.hasItems %}treeview{% endif %}">
+            {% if ITEM.href %}
+                <a href="{{ ITEM.href }}">
+                    {% if ITEM.fa or PARENT is defined %}<i class="fa {{ ITEM.fa|default('') }}"></i>{% endif %}
+                    <span>{{ ITEM.label }}</span>
+                    <span class="pull-right-container">
+                        {% for badge in ITEM.badges %}
+                            {% include('Shared/Views/Components/Generic/Badge.twig') with {BADGE: badge} only %}
+                        {% endfor %}
+                        {% if ITEM.items is not empty %}<i class="fa fa-angle-left pull-right"></i>{% endif %}
+                    </span>
+                </a>
+            {% else %}
+                <span>
+                    {{ ITEM.label }}
+                    {% if ITEM.items is not empty %}<span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>{% endif %}
+                </span>
+            {% endif %}
+            
+            {% if ITEM.hasItems %}
+                <ul class="treeview-menu">
+                    {% for subItem in ITEM.items %}
+                        {% include('Shared/Views/Components/Generic/MenuItem.twig') with {ITEM: subItem, PARENT:ITEM} only %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endif %}
+{% endapply %}
