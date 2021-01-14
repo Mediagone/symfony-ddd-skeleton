@@ -15,6 +15,17 @@
 
 
 {% block BODY_CONTENT %}
+    
+    {% include 'Backend/Views/Components/Layout/Header.twig' with { MODEL:new('App\\UI\\Backend\\Views\\Components\\Layout\\Header', app.user) } only %}
+    
+    <aside class="main-sidebar">
+        <section class="sidebar">
+            {% include('Shared/Views/Components/Generic/Menu.twig') with { MENU:new('App\\UI\\Shared\\Views\\Components\\Generic\\Menu', [
+                {header:'MAIN'},
+                {fa:'fa-dashboard', label:'Dashboard', href:path('backend_dashboard')},
+            ]) } only %}
+        </section>
+    </aside>
     <div class="content-wrapper">
         <section class="content-header">
             <h1>
