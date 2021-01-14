@@ -5,12 +5,13 @@
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
         <title>{% block HEAD_TITLE %}{{ title_separator }}{{ 'app_name'|trans }}{% endblock %}</title>
         <meta name="description" content="{% block HEAD_DESCRIPTION %}{% endblock %}">
-        {% for css in registry('css') %}
+        <link rel="shortcut icon" type="image/png" href="{% block HEAD_FAVICON %}/static/favicon.png{% endblock %}"/>
+    {% for css in registry('css') %}
         <link rel="stylesheet" href="{{ css }}" />
-        {% endfor %}
-        {% for head in registry('head') %}
-            {{ head|raw }}
-        {% endfor %}
+    {% endfor %}
+    {% for head in registry('head') %}
+        {{ head|raw }}
+    {% endfor %}
     </head>
     <body class="{{ registry('bodyClasses')|join(' ') }}">
         <div class="wrapper">

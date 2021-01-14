@@ -1,0 +1,20 @@
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+{% include('Shared/Views/Components/Generic/Menu.twig') with { MENU:new('App\\UI\\Shared\\Views\\Components\\Generic\\Menu', [
+    {header:'MAIN'},
+    {fa:'fa-dashboard', label:'Dashboard', href:path('backend_dashboard'), badges:[{label:'1', type:'danger'}]},
+    {fa:'fa-dashboard', label:'Dashboard 2', href:path('backend_dashboard'), badges:[{label:'2', type:'success'},{label:'1', type:'warning'}], items:[
+        {label:'Item 1', href:path('backend_dashboard')},
+        {label:'Item 2', href:path('backend_dashboard'), items:[
+            {label:'Item 2-1', href:path('backend_dashboard')},
+            {label:'Item 2-2', href:path('backend_dashboard')},
+        ]},
+    ]}
+]) } only %}
+
+    </section>
+    <!-- /.sidebar -->
+</aside>
