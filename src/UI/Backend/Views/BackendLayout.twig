@@ -23,9 +23,13 @@
             {% include('Shared/Views/Components/Generic/Menu.twig') with { MENU:new('App\\UI\\Shared\\Views\\Components\\Generic\\Menu', [
                 {header:'MAIN'},
                 {fa:'fa-dashboard', label:'Dashboard', href:path('backend_dashboard')},
+
             ]) } only %}
         </section>
     </aside>
+    
+    {% include 'Shared/Views/Components/Layout/FlashMessages.twig' with { DOMAIN:'backend' } only %}
+    
     <div class="content-wrapper">
         <section class="content-header">
             <h1>
