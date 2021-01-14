@@ -14,6 +14,9 @@
 {% register once 'sidebar-mini' in 'bodyClasses' %}
 
 
+{% block HEAD_TITLE %}{% block PAGE_TITLE %}{% endblock %}{{ parent() }}{% endblock %}
+
+
 {% block BODY_CONTENT %}
     
     {% include 'Backend/Views/Components/Layout/Header.twig' with { MODEL:new('App\\UI\\Backend\\Views\\Components\\Layout\\Header', app.user) } only %}
@@ -33,7 +36,7 @@
     <div class="content-wrapper">
         <section class="content-header">
             <h1>
-                {% block PAGE_TITLE %}Page title{% endblock %}
+                {% block PAGE_H1 %}Page title{% endblock %}
             </h1>
         </section>
 
