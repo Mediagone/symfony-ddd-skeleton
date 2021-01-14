@@ -1,1 +1,16 @@
-app_name: 'MyApp'
+app_name: 'Symfony DDD Skeleton'
+
+
+login:
+    title: Login
+    email: E-Mail Address
+    password: Password
+    password_forgotten: Forgot Your Password?
+    sign_in: Sign In
+    sign_up: Sign Up
+    sign_out: Sign Out
+    no_account: Don't have an account?
+    flashes:
+        error_html: "An unexpected error Une erreur inattendue est survenue, merci de réessayer !"
+        error_csrf_html: "Une erreur inattendue est survenue, merci de réessayer !"
+        error_credentials_html: "Les identifiants spécifiés ne sont pas valides, merci de réessayer !"
