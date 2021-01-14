@@ -13,6 +13,8 @@
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
                 
+                {% include 'Backend/Views/Components/Layout/HeaderUser.twig' with { MODEL: MODEL.User } only %}
+                
             </ul>
         </div>
     </nav>
