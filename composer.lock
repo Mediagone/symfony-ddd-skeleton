@@ -1872,16 +1872,16 @@
         },
         {
             "name": "mediagone/twig-powerpack",
-            "version": "0.2.1",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediagone/twig-powerpack.git",
-                "reference": "e9cfde6d1ac89a3c85404c44dd7da172cbbb1bf5"
+                "reference": "e063075166f5c9f46f9e44f45a3799e9dccfab6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediagone/twig-powerpack/zipball/e9cfde6d1ac89a3c85404c44dd7da172cbbb1bf5",
-                "reference": "e9cfde6d1ac89a3c85404c44dd7da172cbbb1bf5",
+                "url": "https://api.github.com/repos/Mediagone/twig-powerpack/zipball/e063075166f5c9f46f9e44f45a3799e9dccfab6b",
+                "reference": "e063075166f5c9f46f9e44f45a3799e9dccfab6b",
                 "shasum": ""
             },
             "require": {
@@ -1907,7 +1907,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Provides type-safety and useful helpers to your Twig templates.",
+            "description": "Provides code-quality helpers to your Twig templates.",
             "keywords": [
                 "extension",
                 "quality",
@@ -1915,9 +1915,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Mediagone/twig-powerpack/issues",
-                "source": "https://github.com/Mediagone/twig-powerpack/tree/0.2.1"
+                "source": "https://github.com/Mediagone/twig-powerpack/tree/0.2.2"
             },
-            "time": "2021-01-12T13:48:59+00:00"
+            "time": "2021-01-14T11:14:58+00:00"
         },
         {
             "name": "monolog/monolog",
