@@ -15,21 +15,18 @@
 
 
 {% block BODY_CONTENT %}
+    <div class="content-wrapper">
+        <section class="content-header">
+            <h1>
+                {% block PAGE_TITLE %}Page title{% endblock %}
+            </h1>
+        </section>
 
-    {% if HEADER != null %}
-        {% include 'Shared/Views/Components/PageHeader.twig' %}
-    {% endif %}
+        <section class="content">
+        {% block PAGE_CONTENT %}{% endblock %}
+        </section>
+    </div>
     
-    <main class="main">
-        
-        {% if MENU != null %}
-            {% include 'Shared/Views/Components/PageMenu.twig' %}
-        {% endif %}
-        
-        <div class="content">
-            {% block PAGE_CONTENT %}{% endblock %}
-        </div>
-    </main>
     
     {#% include "Shared/Elements/NotificationPopups.twig" with {Domain: 'backend'} %#}
 {% endblock %}
