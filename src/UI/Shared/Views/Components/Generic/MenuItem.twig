@@ -7,7 +7,8 @@
         <span>{{ ITEM.header }}</span>
     </li>
     {% else %}
-        <li class="{% if ITEM.hasItems %}treeview{% endif %}">
+        {% set isActive = ITEM.href and (is_current_path(ITEM.href) or (ITEM.hasItems and is_current_path_or_child(ITEM.href))) %}
+        <li class="{% if ITEM.hasItems %}treeview{% endif %}{% if isActive %} active{% endif %}">
             {% if ITEM.href %}
                 <a href="{{ ITEM.href }}">
                     {% if ITEM.fa or PARENT is defined %}<i class="fa {{ ITEM.fa|default('') }}"></i>{% endif %}
