@@ -3,6 +3,7 @@
 namespace App\UI\Backend\Views\Components\Layout;
 
 use App\UI\Frontend\SecurityUser;
+use App\UI\Shared\Views\Components\Generic\Menu;
 
 
 final class Header
@@ -19,14 +20,23 @@ final class Header
     }
     
     
+    private ?Menu $menu;
+    
+    public function getMenu() : ?Menu
+    {
+        return $this->menu;
+    }
+    
+    
     
     //========================================================================================================
     // Constructor
     //========================================================================================================
     
-    public function __construct(SecurityUser $user)
+    public function __construct(SecurityUser $user, ?Menu $menu = null)
     {
         $this->user = new HeaderUser($user);
+        $this->menu = $menu;
     }
     
     

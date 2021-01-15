@@ -1,5 +1,6 @@
 {% expect 'App\\UI\\Backend\\Views\\Components\\Layout\\Header' as MODEL %}
 
+{% apply spaceless %}
 <header class="main-header">
     <!-- Logo -->
     <a href="../../index2.html" class="logo">
@@ -10,6 +11,9 @@
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top   navbar navbar-expand navbar-white navbar-light">
         
+        {% if MODEL.Menu %}
+        {% include('Shared/Views/Components/Generic/Menu.twig') with { MENU:MODEL.Menu } only %}
+        {% endif
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
                 
@@ -19,3 +23,4 @@
         </div>
     </nav>
 </header>
+{% endapply %}
