@@ -24,5 +24,41 @@
              {{ js|raw }}
         {% endfor %}
         </script>
+        <style type="text/css">
+            /*@media all and (min-width: 992px) {
+                .navbar .nav-item .dropdown-menu{ display: none; margin-top:0; }
+                .navbar .nav-item:hover .nav-link{ color: #fff;  }
+                .navbar .nav-item:hover .dropdown-menu{ display: block; }
+                .navbar .nav-item .dropdown-menu{ margin-top:0; }
+            }*/
+
+            @media all and (min-width: 992px) {
+                .navbar-nav.submenu-hover li > ul.dropdown-menu{ display: none; }
+                .navbar-nav.submenu-hover li:hover > ul.dropdown-menu{ display: block; }
+            }
+            
+            .skin-black-light .sidebar-menu > li.active > a {
+                border-left-color: #000;
+            }
+
+            .dropdown-menu > .active > a,
+            .dropdown-menu > .active > a:hover,
+            .dropdown-menu > .active > a:focus {
+                color: #777;
+                text-decoration: none;
+                background-color: transparent;
+                outline: 0;
+            }
+
+            .dropdown-menu > .active > a:hover {
+                color: #333;
+                background-color: rgba(0,0,0, 0.04);
+            }
+
+            .sidebar-menu .dropdown-menu{
+                display: block;
+            }
+            
+        </style>
     </body>
 </html>

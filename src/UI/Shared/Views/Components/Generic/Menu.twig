@@ -1,7 +1,7 @@
 {% expect 'App\\UI\\Shared\\Views\\Components\\Generic\\Menu' as MENU %}
 
 {% apply spaceless %}
-<ul class="sidebar-menu tree" data-widget="tree">
+<ul class="{{ MENU.AttrClass }}">
     {% for item in MENU.items %}
         {% include('Shared/Views/Components/Generic/MenuItem.twig') with {ITEM:item} only %}
     {% endfor %}

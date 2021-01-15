@@ -64,11 +64,35 @@ final class MenuItem
     }
 
 
+    private string $attrClass;
+
+    public function getAttrClass() : string
+    {
+        return $this->attrClass;
+    }
+
+
     private array $badges;
 
     public function getBadges() : array
     {
         return $this->badges;
+    }
+
+
+    private string $submenuIndicatorHtml;
+
+    public function getSubmenuIndicatorHtml() : string
+    {
+        return $this->submenuIndicatorHtml;
+    }
+
+
+    private string $submenuAttrClass;
+
+    public function getSubmenuAttrClass() : string
+    {
+        return $this->submenuAttrClass;
     }
     
 
@@ -77,13 +101,16 @@ final class MenuItem
     // Constructor
     //========================================================================================================
     
-    public function __construct(array $data)
+    public function __construct(array $data, string $submenuIndicatorHtml, string $submenuAttrClass)
     {
         $this->header = $data['header'] ?? '';
         $this->label = $data['label'] ?? '';
         $this->href = $data['href'] ?? '';
         $this->fa = $data['fa'] ?? '';
-        $this->isDisplayed = $data['visible'] ?? true === true;
+        $this->attrClass = $data['attrClass'] ?? '';
+        $this->isDisplayed = ($data['visible'] ?? true) === true;
+        $this->submenuIndicatorHtml = $submenuIndicatorHtml;
+        $this->submenuAttrClass = $submenuAttrClass;
         $this->items = $this->buildSubItems($data['items'] ?? []);
         $this->badges = $this->buildBadges($data['badges'] ?? []);
     }
@@ -97,7 +124,7 @@ final class MenuItem
     private function buildSubItems(array $items) : array
     {
         return array_filter(
-            array_map(static fn($item) => new MenuItem($item), $items),
+            array_map(fn($item) => new MenuItem($item, $this->submenuIndicatorHtml, $this->submenuAttrClass), $items),
             static fn($item) => $item->isDisplayed()
         );
     }
