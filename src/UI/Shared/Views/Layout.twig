@@ -14,17 +14,15 @@
     {% endfor %}
     </head>
     <body class="{{ registry('bodyClasses')|join(' ') }}">
-        <div class="wrapper">
-            {% block BODY_CONTENT %}{% endblock %}
-            
-            {% for js in registry('js') %}
-            <script src="{{ js }}"></script>
-            {% endfor %}
-            <script>
-            {% for js in registry('bodyJs') %}
-                 {{ js|raw }}
-            {% endfor %}
-            </script>
-        </div>
+        {% block BODY_CONTENT %}{% endblock %}
+        
+        {% for js in registry('js') %}
+        <script src="{{ js }}"></script>
+        {% endfor %}
+        <script>
+        {% for js in registry('bodyJs') %}
+             {{ js|raw }}
+        {% endfor %}
+        </script>
     </body>
 </html>

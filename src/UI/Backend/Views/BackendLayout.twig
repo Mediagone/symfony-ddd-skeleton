@@ -2,11 +2,11 @@
 
 {% register once '/static/jquery-3.5.1.min.js' priority 0 %}
 {% register once '/static/theme/adminlte-2.4.18/vendors/font-awesome/css/font-awesome.css' %}
-{% register once '/static/theme/adminlte-2.4.18/vendors/bootstrap/css/bootstrap.css' %}
 {% register once '/static/theme/adminlte-2.4.18/vendors/bootstrap/js/bootstrap.js' %}
+{% register once '/static/theme/adminlte-2.4.18/vendors/bootstrap/css/bootstrap.css' %}
+{% register once '/static/theme/adminlte-2.4.18/js/adminlte.js' %}
 {% register once '/static/theme/adminlte-2.4.18/css/adminlte.css' %}
 {% register once '/static/theme/adminlte-2.4.18/css/skins/skin-black-light.css' %}
-{% register once '/static/theme/adminlte-2.4.18/js/adminlte.js' %}
 
 {% register once 'fixed' in 'bodyClasses' %}
 {% register once 'skin-black-light' in 'bodyClasses' %}
@@ -18,6 +18,7 @@
 
 
 {% block BODY_CONTENT %}
+<div class="wrapper">
     
     {% include 'Backend/Views/Components/Layout/Header.twig' with { MODEL:new('App\\UI\\Backend\\Views\\Components\\Layout\\Header', app.user) } only %}
     
@@ -47,4 +48,5 @@
     
     
     {#% include "Shared/Elements/NotificationPopups.twig" with {Domain: 'backend'} %#}
+</div>
 {% endblock %}
