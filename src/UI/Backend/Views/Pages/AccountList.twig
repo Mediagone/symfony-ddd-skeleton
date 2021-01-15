@@ -1,0 +1,40 @@
+{% extends 'Backend/Views/BackendLayout.twig' %}
+
+{% expect 'App\\UI\\Backend\\Views\\Pages\\AccountList' as MODEL %}
+
+
+{% block PAGE_TITLE %}Accounts{% endblock %}
+
+{% block PAGE_H1 %}Accounts <small>List of users</small>{% endblock %}
+
+
+{% block PAGE_CONTENT %}
+    <div class="box box-solid">
+        <div class="box-body">
+            <table class="table table-condensed">
+                <tbody>
+                <tr>
+                    <th style="width: 30px">#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Id</th>
+                    <th style="width: 40px">Role</th>
+                </tr>
+                    {% for id, account in MODEL.Accounts %}
+                    <tr>
+                        <td>{{ id }}</td>
+                        <td>{{ account.Name.toString }}</td>
+                        <td>{{ account.Email.toString }}</td>
+                        <td>{{ account.Id }}</td>
+                        <td></td>
+                    </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="4" class="text-center">No result</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

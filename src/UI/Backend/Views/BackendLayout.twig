@@ -25,9 +25,9 @@
     <aside class="main-sidebar">
         <section class="sidebar">
             {% include('Shared/Views/Components/Generic/Menu.twig') with { MENU:new('App\\UI\\Shared\\Views\\Components\\Generic\\Menu', [
-                {header:'MAIN'},
-                {fa:'fa-dashboard', label:'Dashboard', href:path('backend_dashboard')},
-
+                {fa:'fa-dashboard', label:'Dashboard', href:path('backend_dashboard'), badges:[{label:'1', type:'danger'}]},
+                {header:'Platform'},
+                {fa:'fa-users', label:'Accounts', href:path('backend_account_list')},
             ]) } only %}
         </section>
     </aside>
