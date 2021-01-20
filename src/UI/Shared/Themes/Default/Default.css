@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    @screen xs {
+        .w-responsive {
+            width: calc(theme('screens.xs') - 20px);
+        }
+    }
+    @screen sm {
+        .w-responsive {
+            width: calc(theme('screens.sm') - 20px);
+        }
+    }
+    @screen md {
+        .w-responsive {
+            width: calc(theme('screens.md') - 20px);
+        }
+    }
+    @screen lg {
+        .w-responsive {
+            width: calc(theme('screens.lg') - 20px);
+        }
+    }
+    @screen xl {
+        .w-responsive {
+            width: calc(theme('screens.xl') - 20px);
+        }
+    }
+    
+    
+    section {
+        @apply my-8;
+    }
+    
+    p {
+        @apply
+            pb-5
+            text-justify
+        ;
+    }
+    
+    h1 {
+        @apply
+            font-bold
+            text-4xl
+            text-black
+            mt-8
+            mb-6
+        ;
+    }
+    
+    h2 {
+        @apply
+            font-bold
+            text-2xl
+            text-black
+            mt-5
+            mb-2
+        ;
+    }
+}
+
+
+@layer components {
+    .page {
+        @apply
+            relative z-10 w-full
+            leading-loose
+        ;
+    }
+    
+    
+    .page--wrapper {
+        @apply 
+            box-border w-responsive
+            mx-auto
+            md:px-12 sm:px-8
+        ;
+    }
+
+
+    .page--header {
+        @apply
+            sticky top-0
+            z-40 lg:z-50
+            w-full
+            bg-white
+            border-b border-gray-200
+            shadow
+        ;
+    }
+
+
+    .page--header .nav {
+        @apply
+            w-full
+            flex flex-col lg:flex-row lg:flex-auto
+            pb-2 lg:p-0
+            items-center
+            justify-between
+        ;
+    }
+
+    .page--header .nav--group {
+        @apply
+            flex
+            flex-row
+            flex-wrap lg:flex-nowrap
+            justify-center lg:justify-start
+            items-center
+            pt-2 lg:pt-0
+        ;
+    }
+    
+    .page--header .nav--item {
+        @apply
+            flex items-center
+            px-3
+            font-medium
+            text-gray-500 hover:text-gray-600
+            transition-colors duration-200
+            h-8 leading-8
+        ;
+    }
+
+
+    .page--footer {
+        @apply
+            w-full
+            pt-20
+            bg-white
+            border-b border-gray-200
+        ;
+    }
+}

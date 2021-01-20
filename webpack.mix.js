@@ -2,10 +2,7 @@ const mix = require('laravel-mix');
 
 mix.disableNotifications();
 
-mix.postCss("src/UI/Backend/Views/BackendLayout.css", "public/static/backend.css", [
-    require("tailwindcss"),
-]);
 
-mix.postCss("src/UI/Frontend/Views/FrontendLayout.css", "public/static/frontend.css", [
+mix.postCss("src/UI/Shared/Themes/Default/Default.css", "public/static/styles.css", [
     require("tailwindcss"),
 ]);
