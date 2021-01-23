@@ -2,15 +2,14 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "npm run development",
-    "development": "mix",
+    "dev": "mix",
+    "prod": "mix --production",
     "watch": "mix watch",
     "watch-poll": "mix watch -- --watch-options-poll=1000",
-    "hot": "mix watch --hot",
-    "prod": "npm run production",
-    "production": "mix --production"
+    "hot": "mix watch --hot"
   },
   "devDependencies": {
+    "cross-env": "^7.0",
     "autoprefixer": "^10.0.2",
     "browser-sync": "^2.26.13",
     "browser-sync-webpack-plugin": "2.2.2",

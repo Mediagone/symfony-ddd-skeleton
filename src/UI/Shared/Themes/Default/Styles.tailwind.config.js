@@ -1,10 +1,11 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
     plugins: [
         require('tailwindcss'),
         require('autoprefixer'),
     ],
     purge: {
-      enabled: true,
       content: [
           './src/UI/**/Views/**/*.twig',
     ]},
@@ -16,6 +17,8 @@ module.exports = {
             lg: '1200px',
             xl: '1440px',
         },
+        extend: {
+        }
     },
     variants: {
         extend: {},
