@@ -218,8 +218,12 @@ form.form .input-prefix {
     rounded-l-md
     border border-r-0 border-gray-300
     bg-gray-50
-    text-gray-500 text-sm
+    text-gray-400 text-sm
     ;
+}
+form.form .input-prefix svg {
+    height: 1.1em;
+    @apply text-gray-300;
 }
 form.form .input-prefix + input {
     @apply
