@@ -169,32 +169,37 @@ form.form textarea {
 }
 
 
-form.form .form-group {
-    @apply
-    mt-4
-    flex
-    justify-center
-    space-x-2
-    ;
-}
-
-
 form.form .form-row {
     @apply
-    mt-4
-    flex flex-col justify-center
+    flex flex-row
+    justify-center
     ;
 }
 
-form.form .form-row input,
-form.form .form-row button,
-form.form .form-row select,
-form.form .form-row textarea {
+form.form .form-col {
+    @apply
+    flex flex-col
+    justify-center
+    ;
+}
+
+form.form .form-row + .form-row,
+form.form .form-row + .form-col,
+form.form .form-col + .form-row,
+form.form .form-col + .form-col {
+    @apply mt-4;
+}
+
+
+form.form .form-col input,
+form.form .form-col button,
+form.form .form-col select,
+form.form .form-col textarea {
     @apply
     w-full
     ;
 }
-form.form .form-row p {
+form.form .form-col p {
     @apply
     text-sm
     pb-0
