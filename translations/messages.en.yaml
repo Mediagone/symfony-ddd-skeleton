@@ -3,12 +3,12 @@ app_name: 'Symfony DDD Skeleton'
 
 login:
     title: Login
-    email: E-Mail Address
+    email: Email address
     password: Password
-    password_forgotten: Forgot Your Password?
-    sign_in: Sign In
-    sign_up: Sign Up
-    sign_out: Sign Out
+    password_forgotten: Forgot your password?
+    sign_in: Sign in
+    sign_up: Sign up
+    sign_out: Sign out
     no_account: Don't have an account?
     flashes:
         error_html: "An unexpected error Une erreur inattendue est survenue, merci de réessayer !"
