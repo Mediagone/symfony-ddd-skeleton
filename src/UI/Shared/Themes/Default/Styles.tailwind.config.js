@@ -3,6 +3,7 @@ const colors = require('tailwindcss/colors')
 module.exports = {
     plugins: [
         require('tailwindcss'),
+        require('@tailwindcss/forms'),
         require('autoprefixer'),
     ],
     purge: {

@@ -3,137 +3,231 @@
 @tailwind utilities;
 
 
-@layer base {
-    @screen xs {
-        .w-responsive {
-            width: calc(theme('screens.xs') - 20px);
-        }
+/**********************************************************************************************************************/
+/*  Responsive
+/**********************************************************************************************************************/
+
+@screen xs {
+    .w-responsive {
+        width: calc(theme('screens.xs') - 20px);
     }
-    @screen sm {
-        .w-responsive {
-            width: calc(theme('screens.sm') - 20px);
-        }
+}
+@screen sm {
+    .w-responsive {
+        width: calc(theme('screens.sm') - 20px);
     }
-    @screen md {
-        .w-responsive {
-            width: calc(theme('screens.md') - 20px);
-        }
+}
+@screen md {
+    .w-responsive {
+        width: calc(theme('screens.md') - 20px);
     }
-    @screen lg {
-        .w-responsive {
-            width: calc(theme('screens.lg') - 20px);
-        }
+}
+@screen lg {
+    .w-responsive {
+        width: calc(theme('screens.lg') - 20px);
     }
-    @screen xl {
-        .w-responsive {
-            width: calc(theme('screens.xl') - 20px);
-        }
-    }
-    
-    
-    section {
-        @apply my-8;
-    }
-    
-    p {
-        @apply
-            pb-5
-            text-justify
-        ;
-    }
-    
-    
-    h1 {
-        @apply
-            font-bold
-            text-4xl
-            text-black
-            mt-8
-            mb-6
-        ;
-    }
-    
-    h2 {
-        @apply
-            font-bold
-            text-2xl
-            text-black
-            mt-5
-            mb-2
-        ;
+}
+@screen xl {
+    .w-responsive {
+        width: calc(theme('screens.xl') - 20px);
     }
 }
 
 
-@layer components {
-    .page {
-        @apply
-            relative z-10 w-full
-            leading-loose
-        ;
-    }
-    
-    
-    .page--wrapper {
-        @apply 
-            box-border w-responsive
-            mx-auto
-            md:px-12 sm:px-8
-        ;
-    }
 
+/**********************************************************************************************************************/
+/*  Page
+/**********************************************************************************************************************/
 
-    .page--header {
-        @apply
-            sticky top-0
-            z-40 lg:z-50
-            w-full
-            bg-white
-            border-b border-gray-200
-            shadow
-        ;
-    }
-
-
-    .page--header .nav {
-        @apply
-            w-full
-            flex flex-col lg:flex-row lg:flex-auto
-            pb-2 lg:p-0
-            items-center
-            justify-between
-        ;
-    }
-
-    .page--header .nav--group {
-        @apply
-            flex
-            flex-row
-            flex-wrap lg:flex-nowrap
-            justify-center lg:justify-start
-            items-center
-            pt-2 lg:pt-0
-        ;
-    }
-    
-    .page--header .nav--item {
-        @apply
-            flex items-center
-            px-3
-            font-medium
-            text-gray-500 hover:text-gray-600
-            transition-colors duration-200
-            h-8 leading-8
-        ;
-    }
-
-
-    .page--footer {
-        @apply
-            w-full
-            pt-20
-            bg-white
-            border-b border-gray-200
-        ;
-    }
+.page {
+    @apply
+    relative z-10 w-full
+    leading-loose
+    ;
 }
+
+.page--wrapper {
+    @apply
+    box-border w-responsive
+    mx-auto
+    md:px-12 sm:px-8
+    ;
+}
+
+.page--header {
+    @apply
+    sticky top-0
+    z-40 lg:z-50
+    w-full
+    bg-white
+    border-b border-gray-200
+    shadow
+    ;
+}
+
+.page--header .nav {
+    @apply
+    w-full
+    flex flex-col lg:flex-row lg:flex-auto
+    pb-2 lg:p-0
+    items-center
+    justify-between
+    ;
+}
+
+.page--header .nav--group {
+    @apply
+    flex
+    flex-row
+    flex-wrap lg:flex-nowrap
+    justify-center lg:justify-start
+    items-center
+    pt-2 lg:pt-0
+    ;
+}
+
+.page--header .nav--item {
+    @apply
+    flex items-center
+    px-3
+    font-medium
+    text-gray-500 hover:text-gray-600
+    transition-colors duration-200
+    h-8 leading-8
+    ;
+}
+
+.page--footer {
+    @apply
+    w-full
+    pt-20
+    bg-white
+    border-b border-gray-200
+    ;
+}
+
+
+
+/**********************************************************************************************************************/
+/*  Content
+/**********************************************************************************************************************/
+
+section {
+    @apply my-8;
+}
+
+p {
+    @apply
+    pb-5
+    text-justify
+    ;
+}
+
+h1 {
+    @apply
+    font-bold
+    text-4xl
+    text-black
+    mt-8
+    mb-6
+    ;
+}
+
+h2 {
+    @apply
+    font-bold
+    text-2xl
+    text-black
+    mt-5
+    mb-2
+    ;
+}
+
+a {
+    @apply
+    text-blue-500
+    hover:underline
+    ;
+}
+
+/**********************************************************************************************************************/
+/*  Form
+/**********************************************************************************************************************/
+
+form.form input,
+form.form button,
+form.form select,
+form.form textarea {
+    @apply
+    sm:text-sm
+    rounded-md
+    border-gray-300
+    placeholder-gray-300
+    focus:ring-primary-300 focus:border-primary-300
+    ;
+}
+
+
+form.form .form-group {
+    @apply
+    mt-4
+    flex
+    ;
+}
+
+form.form .form-group input,
+form.form .form-group button,
+form.form .form-group select,
+form.form .form-group textarea {
+    @apply w-full;
+}
+form.form textarea {
+    min-height: 5em;
+}
+
+form.form .input-prefix {
+    @apply
+    inline-flex
+    items-center
+    px-3
+    rounded-l-md
+    border border-r-0 border-gray-300
+    bg-gray-50
+    text-gray-500 text-sm
+    ;
+}
+form.form .input-prefix + input {
+    @apply
+    rounded-none rounded-r-md
+    ;
+}
+
+
+form.form button,
+form.form [role="button"],
+form.form input[type="submit"]
+{
+    cursor: pointer;
+    @apply
+    inline-flex
+    bg-white hover:bg-gray-50
+    py-2 px-3
+    border border-gray-300
+    rounded-md
+    shadow-sm
+    text-sm leading-4 font-medium text-gray-700
+    focus:outline-none
+    focus:ring-2
+    focus:ring-offset-2
+    focus:ring-indigo-500
+    ;
+}
+
+form.form input[type="submit"],
+form.form button[type="submit"] {
+    @apply
+    bg-primary-200 hover:bg-primary-300
+    border-primary-300 hover:border-primary-400
+    ;
+}
+
