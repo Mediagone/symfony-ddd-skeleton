@@ -162,7 +162,7 @@ form.form textarea {
     sm:text-sm
     rounded-md
     border-gray-300
-    placeholder-gray-300
+    placeholder-gray-400
     focus:ring-primary-300 focus:border-primary-300
     ;
 }
@@ -172,13 +172,23 @@ form.form .form-group {
     @apply
     mt-4
     flex
+    justify-center
+    space-x-2
     ;
 }
 
-form.form .form-group input,
-form.form .form-group button,
-form.form .form-group select,
-form.form .form-group textarea {
+
+form.form .form-row {
+    @apply
+    mt-4
+    flex justify-center
+    ;
+}
+
+form.form .form-row input,
+form.form .form-row button,
+form.form .form-row select,
+form.form .form-row textarea {
     @apply w-full;
 }
 form.form textarea {
