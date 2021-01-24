@@ -150,6 +150,7 @@ a {
     ;
 }
 
+
 /**********************************************************************************************************************/
 /*  Form
 /**********************************************************************************************************************/
@@ -181,7 +182,7 @@ form.form .form-group {
 form.form .form-row {
     @apply
     mt-4
-    flex justify-center
+    flex flex-col justify-center
     ;
 }
 
@@ -189,8 +190,17 @@ form.form .form-row input,
 form.form .form-row button,
 form.form .form-row select,
 form.form .form-row textarea {
-    @apply w-full;
+    @apply
+    w-full
+    ;
 }
+form.form .form-row p {
+    @apply
+    text-sm
+    pb-0
+    ;
+}
+
 form.form textarea {
     min-height: 5em;
 }
