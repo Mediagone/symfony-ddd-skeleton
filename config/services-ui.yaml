@@ -9,6 +9,7 @@ services:
 
         bind:
             $securityLoginRoute: '%security_login_route%'
+            $kernelDebug: '%kernel.debug%'
             
 
     # Tag controllers classes to make sure services can be injected as action arguments.
@@ -30,3 +31,4 @@ services:
     App\UI\:
         resource: '../src/UI/*/Services'
 
+    Symfony\Component\ErrorHandler\ErrorRenderer\ErrorRendererInterface: '@twig.error_renderer.html'
