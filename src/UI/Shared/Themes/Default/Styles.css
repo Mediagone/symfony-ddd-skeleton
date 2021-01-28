@@ -90,6 +90,7 @@
 
 .page--header .nav--item {
     @apply
+    /*relative*/
     relative
     box-content
     items-center
@@ -126,6 +127,7 @@
         block
         absolute
         px-2 py-2
+        /*bg-gray-100*/
         space-y-1
         bg-white
         rounded-md
@@ -160,12 +162,96 @@
 
 
 /**********************************************************************************************************************/
+/*  Sidebar
+/**********************************************************************************************************************/
+
+aside {
+    @apply
+        min-h-full
+    ;
+}
+
+aside .vertical-menu {
+    @apply
+        py-6
+        px-3
+    ;
+}
+
+aside .vertical-menu li {
+    @apply
+        h-10
+        leading-10
+    ;
+}
+
+aside .vertical-menu li ul {
+    @apply
+    pl-4
+    ;
+}
+
+aside .vertical-menu li ul li {
+    @apply
+    h-8
+    leading-8
+    ;
+}
+
+aside .vertical-menu li a {
+    @apply
+        px-2
+        w-full
+        h-full
+        inline-block
+        hover:bg-gray-100
+        rounded-md
+    ;
+}
+
+aside .vertical-menu li a svg {
+    @apply
+        h-5
+        w-5
+        inline-block
+        mr-1
+    ;
+}
+
+
+aside .vertical-menu li .badges--container {
+    @apply
+        flex
+        flex-row
+        float-right
+        h-full
+        items-center
+        space-x-0.5
+    ;
+}
+
+aside .vertical-menu li .badges--container .badge {
+    @apply
+        flex flex-none
+        text-white
+        px-1.5
+        text-xs
+        font-bold
+        rounded
+        h-4
+        leading-4
+    ;
+}
+
+
+
+/**********************************************************************************************************************/
 /*  Content
 /**********************************************************************************************************************/
 
 html,
 body{
-    @apply h-full;
+    @apply min-h-full;
 }
 
 main section {
