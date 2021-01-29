@@ -2,30 +2,36 @@
 
 {% apply spaceless %}
     {% if ITEM.header %}
-    <li class="header">
+    <li class="uppercase text-gray-300">
         {% if ITEM.fa or PARENT is defined %}<i class="fa {{ ITEM.fa|default('') }}"></i>&nbsp;{% endif %}
         <span>{{ ITEM.header }}</span>
     </li>
     {% else %}
         {% set isActive = ITEM.href and (is_current_path(ITEM.href) or (ITEM.hasItems and is_current_path_or_child(ITEM.href))) %}
-        <li class="{% if ITEM.hasItems %}hasItems{% endif %}{% if isActive %} active{% endif %} {{ ITEM.AttrClass }}">
+        <li class="{% if ITEM.hasItems %}-has-items{% endif %}{% if isActive %} -active{% endif %} {{ ITEM.AttrClass }}">
             {% if ITEM.href %}
-                <a class="nav-link" href="{{ ITEM.href }}">
-                    {% if ITEM.fa %}<i class="fa {{ ITEM.fa|default('') }}"></i>{% endif %}
-                    {{ ITEM.label|raw }}
-                    {% if ITEM.hasItems and ITEM.SubmenuIndicatorHtml %}{{ ITEM.SubmenuIndicatorHtml|raw }}{% endif %}
-                    {% if ITEM.badges is not empty %}
-                        <span class="pull-right-container">
-                            {% for badge in ITEM.badges %}
-                                {% include('Shared/Views/Components/Generic/Badge.twig') with {BADGE: badge} only %}
-                            {% endfor %}
-                        </span>
-                    {% endif %}
+                <a class="" href="{{ ITEM.href }}">
+                    {{ ITEM.fa|default('')|raw }}
+                    <div class="flex-grow">{{ ITEM.label|raw }}</div>
+                    <div class="badges--container">
+                        {% for badge in ITEM.badges %}
+                            <div class="badge {{ badge.attrClass }}">{{ badge.label }}</div>
+{#                            <span class="badge bg-red-500">1</span>#}
+                        {% endfor %}
+                    </div>
+{#                    {% if ITEM.hasItems and ITEM.SubmenuIndicatorHtml %}{{ ITEM.SubmenuIndicatorHtml|raw }}{% endif %}#}
+{#                    {% if ITEM.badges is not empty %}#}
+{#                        <span class="pull-right-container">#}
+{#                            {% for badge in ITEM.badges %}#}
+{#                                {% include('Shared/Views/Components/Generic/Badge.twig') with {BADGE: badge} only %}#}
+{#                            {% endfor %}#}
+{#                        </span>#}
+{#                    {% endif %}#}
                 </a>
             {% else %}
                 <span>
                     {{ ITEM.label|raw }}
-                    {% if ITEM.hasItems and ITEM.SubmenuIndicatorHtml %}{{ ITEM.SubmenuIndicatorHtml|raw }}{% endif %}
+{#                    {% if ITEM.hasItems and ITEM.SubmenuIndicatorHtml %}{{ ITEM.SubmenuIndicatorHtml|raw }}{% endif %}#}
                 </span>
             {% endif %}
             
