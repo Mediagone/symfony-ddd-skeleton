@@ -13,9 +13,6 @@
     <php>
         <ini name="error_reporting" value="-1" />
         <server name="SHELL_VERBOSITY" value="-1" />
-        <env name="KERNEL_CLASS" value="App\Kernel" />
-
-        <!-- define your env variables for the test env here -->
         <server name="APP_ENV" value="test" force="true" />
     </php>
 
