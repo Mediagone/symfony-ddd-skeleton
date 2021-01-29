@@ -1,0 +1,30 @@
+@layer utilities {
+    
+    @screen xs {
+        .w-responsive {
+            width: calc(theme('screens.xs') - 20px);
+        }
+    }
+    @screen sm {
+        .w-responsive {
+            width: calc(theme('screens.sm') - 20px);
+        }
+    }
+    @screen md {
+        .w-responsive {
+            width: calc(theme('screens.md') - 20px);
+        }
+    }
+    @screen lg {
+        .w-responsive {
+            width: calc(theme('screens.lg') - 20px);
+        }
+    }
+    @screen xl {
+        .w-responsive {
+            width: calc(theme('screens.xl') - 20px);
+        }
+    }
+
+
+}

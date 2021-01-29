@@ -1,0 +1,60 @@
+@layer base {
+
+    table.table {
+        @apply
+        shadow
+        rounded-md
+        overflow-hidden
+        min-w-full
+        divide-y divide-gray-200
+        bg-white
+        mt-6 mb-8
+        ;
+    }
+
+    table.table thead {
+        @apply
+        bg-gray-50
+        ;
+    }
+
+    table.table thead th {
+        @apply
+        px-6 py-3
+        text-left text-xs
+        font-medium
+        text-gray-500
+        uppercase
+        tracking-wider
+        ;
+    }
+
+    table.table tr:nth-child(even) {
+        @apply
+        bg-gray-50
+        ;
+    }
+
+    table.table td {
+        @apply
+        text-sm
+        text-gray-500
+        px-6 py-4
+        ;
+    }
+
+    table.table td.table--text-main {
+        @apply
+        font-medium
+        text-gray-900
+        ;
+    }
+
+    table.table td.table--text-important {
+        @apply
+        font-bold
+        text-gray-900
+        ;
+    }
+
+}

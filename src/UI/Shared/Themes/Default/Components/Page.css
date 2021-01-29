@@ -1,0 +1,125 @@
+@layer components {
+    
+    .page {
+        @apply
+        relative z-10 w-full
+        leading-loose
+        ;
+    }
+    
+    .page--wrapper {
+        @apply
+        box-border
+        mx-auto
+        md:px-12 sm:px-8
+        ;
+    }
+    
+    .page--header {
+        @apply
+        sticky
+        top-0
+        z-40 lg:z-50
+        w-full
+        bg-white
+        border-b border-gray-200
+        shadow
+        ;
+    }
+    
+    .page--header .nav {
+        @apply
+        w-full
+        h-auto lg:h-14
+        flex flex-col lg:flex-row lg:flex-auto
+        pb-2 lg:pb-0
+        items-center
+        justify-between
+        ;
+    }
+    
+    .page--header .nav--group {
+        @apply
+        flex
+        flex-row
+        flex-wrap lg:flex-nowrap
+        justify-center lg:justify-start
+        items-center
+        pt-2 lg:pt-0
+        space-x-2
+        ;
+    }
+    
+    .page--header .nav--item {
+        @apply
+            /*relative*/
+        relative
+        box-content
+        items-center
+        h-6 leading-6
+        font-medium
+        transition-colors duration-200
+    
+        px-3 py-2 rounded-md
+        text-gray-500
+        ;
+    }
+    .page--header a.nav--item {
+        @apply
+        hover:text-gray-600
+        hover:bg-gray-100
+        ;
+    }
+    .page--header div.nav--item {
+        @apply
+        hover:bg-gray-50
+        cursor-default
+        ;
+    }
+    
+    .page--header .nav--item--active {
+        @apply bg-gray-100;
+    }
+    
+    
+    .page--header .nav--item ul.nav--item--submenu {
+        @apply
+        hidden
+        mt-2
+        block
+        absolute
+        px-2 py-2
+            /*bg-gray-100*/
+        space-y-1
+        bg-white
+        rounded-md
+        shadow
+        ;
+    }
+    .page--header .nav--item ul.nav--item--submenu > li > a {
+        @apply
+        block
+        w-full
+        px-2 py-1
+        hover:bg-gray-100
+        rounded-md
+        ;
+    }
+    
+    .page--header .nav--item.-with-submenu:hover ul.nav--item--submenu {
+        @apply block;
+    }
+    
+    
+    
+    .page--footer {
+        @apply
+        w-full
+        pt-20
+        bg-white
+        border-b border-gray-200
+        ;
+    }
+
+
+}

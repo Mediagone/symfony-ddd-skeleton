@@ -1,0 +1,110 @@
+@layer base {
+
+    form.form input,
+    form.form button,
+    form.form select,
+    form.form textarea {
+        @apply
+        sm:text-sm
+        rounded-md
+        border-gray-300
+        placeholder-gray-300
+        focus:ring-primary-300 focus:border-primary-300
+        ;
+    }
+
+
+    form.form .form-row {
+        @apply
+        flex flex-row
+        justify-center
+        ;
+    }
+
+    form.form .form-col {
+        @apply
+        flex flex-col
+        justify-center
+        ;
+    }
+
+    form.form .form-row + .form-row,
+    form.form .form-row + .form-col,
+    form.form .form-col + .form-row,
+    form.form .form-col + .form-col {
+        @apply mt-4;
+    }
+
+
+    form.form .form-col input,
+    form.form .form-col button,
+    form.form .form-col select,
+    form.form .form-col textarea {
+        @apply
+        w-full
+        ;
+    }
+
+    form.form .form-col p {
+        @apply
+        text-sm
+        pb-0
+        ;
+    }
+
+    form.form textarea {
+        min-height: 5em;
+    }
+
+    form.form .input-prefix {
+        @apply
+        inline-flex
+        items-center
+        px-3
+        rounded-l-md
+        border border-r-0 border-gray-300
+        bg-gray-50
+        text-gray-400 text-sm
+        ;
+    }
+
+    form.form .input-prefix svg {
+        height: 1.1em;
+        @apply text-gray-300;
+    }
+
+    form.form .input-prefix + input {
+        @apply
+        rounded-none rounded-r-md
+        ;
+    }
+
+
+    form.form button,
+    form.form [role="button"],
+    form.form input[type="submit"] {
+        @apply
+        inline-flex
+        bg-white hover:bg-gray-50
+        py-2 px-3
+        border border-gray-300
+        rounded-md
+        shadow-sm
+        text-sm leading-4 font-medium text-gray-700
+        focus:outline-none
+        focus:ring-2
+        focus:ring-offset-2
+        focus:ring-indigo-500
+        cursor-pointer
+        ;
+    }
+
+    form.form input[type="submit"],
+    form.form button[type="submit"] {
+        @apply
+        bg-primary-200 hover:bg-primary-300
+        border-primary-300 hover:border-primary-400
+        ;
+    }
+
+}

@@ -1,0 +1,106 @@
+@layer components {
+
+    aside {
+        @apply
+        min-h-full
+        z-40 lg:z-50
+        ;
+    }
+
+    aside nav > ul {
+        @apply
+        py-6
+        px-3
+        ;
+    }
+
+    aside nav > ul li {
+        @apply
+        min-h-10
+        leading-10
+        relative
+        mt-0.5
+        ;
+    }
+
+    aside nav > ul li ul {
+        @apply
+        pl-4
+        ;
+    }
+
+    aside nav > ul li ul li {
+        @apply
+        min-h-8
+        leading-8
+        ;
+    }
+
+    aside nav > ul li > span {
+        @apply
+        px-2
+        cursor-default
+        hover:bg-gray-50
+        ;
+    }
+
+    aside nav > ul li > a,
+    aside nav > ul li > span {
+        @apply
+        px-2
+        w-full
+        h-full
+        flex
+        flex-row
+        items-center
+        hover:bg-gray-100
+        rounded-md
+        ;
+    }
+
+    aside nav > ul li > span {
+        @apply
+        cursor-default
+        hover:bg-gray-50
+        ;
+    }
+
+    aside nav > ul li.-active > a {
+        @apply bg-gray-100;
+    }
+
+    aside nav > ul li > a svg {
+        @apply
+        h-5
+        w-5
+        inline-block
+        mr-1
+        ;
+    }
+
+
+    aside nav > ul li div.badges--container {
+        @apply
+        flex
+        flex-row
+        float-right
+        h-full
+        items-center
+        space-x-0.5
+        ;
+    }
+
+    aside nav > ul li .badges--container .badge {
+        @apply
+        flex flex-none
+        text-white
+        px-1.5
+        text-xs
+        font-bold
+        rounded
+        h-4
+        leading-4
+        ;
+    }
+
+}

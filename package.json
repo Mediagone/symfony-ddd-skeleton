@@ -16,6 +16,7 @@
     "cross-env": "^7.0",
     "laravel-mix": "^6.0.6",
     "postcss": "^8.1.14",
+    "postcss-import": "^14.0.0",
     "tailwindcss": "^2.0.2"
   }
 }

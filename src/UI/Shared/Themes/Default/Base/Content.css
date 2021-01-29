@@ -1,0 +1,65 @@
+@layer base {
+        
+    html,
+    body {
+        @apply h-full;
+    }
+    
+    main {
+        @apply
+        max-h-full
+            /*overflow-scroll*/
+        ;
+    }
+    
+    main section {
+        @apply
+        mt-8 mb-14
+        ;
+    }
+    
+    main p {
+        @apply
+        pb-5
+        text-justify
+        ;
+    }
+    
+    main a {
+        @apply
+        text-indigo-600
+        hover:underline
+        ;
+    }
+    
+    main h1 {
+        @apply
+        font-bold
+        text-4xl
+        text-gray-600
+        mt-8
+        mb-6
+        ;
+    }
+    
+    main h2 {
+        @apply
+        font-bold
+        text-2xl
+        text-gray-600
+        mt-5
+        mb-2
+        ;
+    }
+    
+    main h3 {
+        @apply
+        font-bold
+        text-base
+        text-gray-600
+        mt-3
+        mb-1
+        ;
+    }
+
+}
