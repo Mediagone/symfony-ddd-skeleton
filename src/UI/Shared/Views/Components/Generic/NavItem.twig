@@ -1,21 +1,21 @@
-{% expect 'App\\UI\\Shared\\Views\\Components\\Generic\\MenuItem' as ITEM %}
+{% expect 'App\\UI\\Shared\\Views\\Components\\Generic\\NavItem' as ITEM %}
 
 {% apply spaceless %}
     {% if ITEM.header %}
-    <li class="uppercase text-gray-300">
-        {% if ITEM.fa or PARENT is defined %}<i class="fa {{ ITEM.fa|default('') }}"></i>&nbsp;{% endif %}
-        <span>{{ ITEM.header }}</span>
-    </li>
+        <div class="nav__title uppercase text-gray-300">
+            {% if ITEM.fa or PARENT is defined %}<i class="fa {{ ITEM.fa|default('') }}"></i>&nbsp;{% endif %}
+            <span>{{ ITEM.header }}</span>
+        </div>
     {% else %}
         {% set isActive = ITEM.href and (is_current_path(ITEM.href) or (ITEM.hasItems and is_current_path_or_child(ITEM.href))) %}
-        <li class="{% if ITEM.hasItems %}-has-items{% endif %}{% if isActive %} -active{% endif %} {{ ITEM.AttrClass }}">
+        <div class="nav__item{% if ITEM.hasItems %} nav__item--with-submenu{% endif %}{% if isActive %} nav__item--active{% endif %} {{ ITEM.AttrClass }}">
             {% if ITEM.href %}
                 <a class="" href="{{ ITEM.href }}">
                     {{ ITEM.fa|default('')|raw }}
                     <div class="flex-grow">{{ ITEM.label|raw }}</div>
-                    <div class="badges--container">
+                    <div class="nav__badges">
                         {% for badge in ITEM.badges %}
-                            <div class="badge {{ badge.attrClass }}">{{ badge.label }}</div>
+                            <div class="nav__badge {{ badge.attrClass }}">{{ badge.label }}</div>
 {#                            <span class="badge bg-red-500">1</span>#}
                         {% endfor %}
                     </div>
@@ -36,12 +36,12 @@
             {% endif %}
             
             {% if ITEM.hasItems %}
-                <ul class="{{ ITEM.SubmenuAttrClass }}">
+                <div class="nav__submenu {{ ITEM.SubmenuAttrClass }}">
                     {% for subItem in ITEM.items %}
-                        {% include('Shared/Views/Components/Generic/MenuItem.twig') with {ITEM: subItem, PARENT:ITEM} only %}
+                        {% include('Shared/Views/Components/Generic/NavItem.twig') with {ITEM: subItem, PARENT:ITEM} only %}
                     {% endfor %}
-                </ul>
+                </div>
             {% endif %}
-        </li>
+        </div>
     {% endif %}
 {% endapply %}

@@ -6,7 +6,7 @@ use function array_filter;
 use function array_map;
 
 
-final class Menu
+final class Nav
 {
     //========================================================================================================
     // Properties
@@ -36,7 +36,7 @@ final class Menu
     public function __construct(array $items, array $options = [])
     {
         $this->items = array_filter(
-            array_map(static fn($item) => new MenuItem(
+            array_map(static fn($item) => new NavItem(
                 $item,
                 $options['submenuIndicatorHtml'] ?? '',
                 $options['submenuAttrClass'] ?? '',

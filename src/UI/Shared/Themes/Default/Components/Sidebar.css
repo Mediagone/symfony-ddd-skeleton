@@ -1,51 +1,54 @@
 @layer components {
 
-    aside {
+    .sidebar {
         @apply
         min-h-full
         z-40 lg:z-50
         ;
     }
 
-    aside nav > ul {
+    .sidebar .nav {
         @apply
         py-6
         px-3
         ;
     }
 
-    aside nav > ul li {
+    .sidebar .nav .nav__title,
+    .sidebar .nav .nav__item {
         @apply
         min-h-10
         leading-10
         relative
         mt-0.5
+        cursor-default
         ;
     }
 
-    aside nav > ul li ul {
+    .sidebar .nav .nav__item .nav__submenu {
         @apply
         pl-4
         ;
     }
 
-    aside nav > ul li ul li {
+    .sidebar .nav .nav__item .nav__submenu > .nav__item {
         @apply
         min-h-8
         leading-8
         ;
     }
 
-    aside nav > ul li > span {
+    .sidebar .nav .nav__item > span {
         @apply
         px-2
         cursor-default
         hover:bg-gray-50
+        cursor-default
         ;
     }
 
-    aside nav > ul li > a,
-    aside nav > ul li > span {
+    .sidebar .nav .nav__item > a,
+    .sidebar .nav .nav__item > span {
         @apply
         px-2
         w-full
@@ -58,18 +61,17 @@
         ;
     }
 
-    aside nav > ul li > span {
-        @apply
-        cursor-default
-        hover:bg-gray-50
-        ;
-    }
+    /*.sidebar .nav > .nav__item > span {*/
+    /*    @apply*/
+    /*    hover:bg-gray-50*/
+    /*    ;*/
+    /*}*/
 
-    aside nav > ul li.-active > a {
+    .sidebar .nav .nav__item--active > a {
         @apply bg-gray-100;
     }
 
-    aside nav > ul li > a svg {
+    .sidebar .nav .nav__item > a svg {
         @apply
         h-5
         w-5
@@ -79,7 +81,7 @@
     }
 
 
-    aside nav > ul li div.badges--container {
+    .sidebar .nav .nav__item div.nav__badges {
         @apply
         flex
         flex-row
@@ -90,7 +92,7 @@
         ;
     }
 
-    aside nav > ul li .badges--container .badge {
+    .sidebar .nav .nav__item .nav__badge {
         @apply
         flex flex-none
         text-white
@@ -102,5 +104,6 @@
         leading-4
         ;
     }
-
+    
+    
 }

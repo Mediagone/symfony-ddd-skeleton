@@ -38,7 +38,7 @@
         ;
     }
     
-    .page__header .nav--group {
+    .page__header .nav__group {
         @apply
         flex
         flex-row
@@ -50,7 +50,7 @@
         ;
     }
     
-    .page__header .nav--item {
+    .page__header .nav__item {
         @apply
             /*relative*/
         relative
@@ -64,25 +64,25 @@
         text-gray-500
         ;
     }
-    .page__header a.nav--item {
+    .page__header a.nav__item {
         @apply
         hover:text-gray-600
         hover:bg-gray-100
         ;
     }
-    .page__header div.nav--item {
+    .page__header div.nav__item {
         @apply
         hover:bg-gray-50
         cursor-default
         ;
     }
     
-    .page__header .nav--item--active {
+    .page__header .nav__item--active {
         @apply bg-gray-100;
     }
     
     
-    .page__header .nav--item ul.nav--item--submenu {
+    .page__header .nav__item ul.nav__submenu {
         @apply
         hidden
         mt-2
@@ -96,7 +96,7 @@
         shadow
         ;
     }
-    .page__header .nav--item ul.nav--item--submenu > li > a {
+    .page__header .nav__item ul.nav__submenu > li > a {
         @apply
         block
         w-full
@@ -106,7 +106,7 @@
         ;
     }
     
-    .page__header .nav--item.-with-submenu:hover ul.nav--item--submenu {
+    .page__header .nav__item--with-submenu:hover ul.nav__submenu {
         @apply block;
     }
     

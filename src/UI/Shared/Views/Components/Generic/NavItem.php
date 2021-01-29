@@ -6,7 +6,7 @@ use function array_filter;
 use function array_map;
 
 
-final class MenuItem
+final class NavItem
 {
     //========================================================================================================
     // Properties
@@ -124,7 +124,7 @@ final class MenuItem
     private function buildSubItems(array $items) : array
     {
         return array_filter(
-            array_map(fn($item) => new MenuItem($item, $this->submenuIndicatorHtml, $this->submenuAttrClass), $items),
+            array_map(fn($item) => new NavItem($item, $this->submenuIndicatorHtml, $this->submenuAttrClass), $items),
             static fn($item) => $item->isDisplayed()
         );
     }

@@ -1,0 +1,9 @@
+{% expect 'App\\UI\\Shared\\Views\\Components\\Generic\\Nav' as NAV %}
+
+{% apply spaceless %}
+    <nav class="nav {{ NAV.AttrClass }}">
+        {% for item in NAV.items %}
+            {% include('Shared/Views/Components/Generic/NavItem.twig') with {ITEM:item} only %}
+        {% endfor %}
+    </nav>
+{% endapply %}
