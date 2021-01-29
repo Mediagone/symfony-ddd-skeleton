@@ -349,6 +349,7 @@ form.form textarea {
     sm:text-sm
     rounded-md
     border-gray-300
+    placeholder-gray-300
     focus:ring-primary-300 focus:border-primary-300
     ;
 }
