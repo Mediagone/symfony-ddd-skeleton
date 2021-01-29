@@ -7,7 +7,7 @@
         ;
     }
     
-    .page--wrapper {
+    .page__wrapper {
         @apply
         box-border
         mx-auto
@@ -15,7 +15,7 @@
         ;
     }
     
-    .page--header {
+    .page__header {
         @apply
         sticky
         top-0
@@ -27,7 +27,7 @@
         ;
     }
     
-    .page--header .nav {
+    .page__header .nav {
         @apply
         w-full
         h-auto lg:h-14
@@ -38,7 +38,7 @@
         ;
     }
     
-    .page--header .nav--group {
+    .page__header .nav--group {
         @apply
         flex
         flex-row
@@ -50,7 +50,7 @@
         ;
     }
     
-    .page--header .nav--item {
+    .page__header .nav--item {
         @apply
             /*relative*/
         relative
@@ -64,25 +64,25 @@
         text-gray-500
         ;
     }
-    .page--header a.nav--item {
+    .page__header a.nav--item {
         @apply
         hover:text-gray-600
         hover:bg-gray-100
         ;
     }
-    .page--header div.nav--item {
+    .page__header div.nav--item {
         @apply
         hover:bg-gray-50
         cursor-default
         ;
     }
     
-    .page--header .nav--item--active {
+    .page__header .nav--item--active {
         @apply bg-gray-100;
     }
     
     
-    .page--header .nav--item ul.nav--item--submenu {
+    .page__header .nav--item ul.nav--item--submenu {
         @apply
         hidden
         mt-2
@@ -96,7 +96,7 @@
         shadow
         ;
     }
-    .page--header .nav--item ul.nav--item--submenu > li > a {
+    .page__header .nav--item ul.nav--item--submenu > li > a {
         @apply
         block
         w-full
@@ -106,13 +106,13 @@
         ;
     }
     
-    .page--header .nav--item.-with-submenu:hover ul.nav--item--submenu {
+    .page__header .nav--item.-with-submenu:hover ul.nav--item--submenu {
         @apply block;
     }
     
     
     
-    .page--footer {
+    .page__footer {
         @apply
         w-full
         pt-20
