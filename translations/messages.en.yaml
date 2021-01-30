@@ -3,8 +3,6 @@ app_name: 'Symfony DDD Skeleton'
 
 login:
     title: Login
-    email: Email address
-    password: Password
     password_forgotten: Forgot your password?
     sign_in: Sign in
     sign_up: Sign up
@@ -14,3 +12,13 @@ login:
         error_html: "An unexpected error Une erreur inattendue est survenue, merci de réessayer !"
         error_csrf_html: "Une erreur inattendue est survenue, merci de réessayer !"
         error_credentials_html: "Les identifiants spécifiés ne sont pas valides, merci de réessayer !"
+
+account:
+    name: Name
+    email: Email
+    password: Password
+    
+    
+form:
+    save: Save
+    modify: Modify
