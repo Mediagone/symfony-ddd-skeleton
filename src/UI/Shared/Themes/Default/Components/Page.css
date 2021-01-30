@@ -27,7 +27,7 @@
         ;
     }
     
-    .page__header .nav {
+    .page__header .page__main-menu {
         @apply
         w-full
         h-auto lg:h-14
@@ -38,7 +38,7 @@
         ;
     }
     
-    .page__header .nav__group {
+    .page__header .nav {
         @apply
         flex
         flex-row
@@ -50,66 +50,25 @@
         ;
     }
     
-    .page__header .nav__item {
-        @apply
-            /*relative*/
-        relative
-        box-content
-        items-center
-        h-6 leading-6
-        font-medium
-        transition-colors duration-200
     
-        px-3 py-2 rounded-md
-        text-gray-500
-        ;
-    }
-    .page__header a.nav__item {
-        @apply
-        hover:text-gray-600
-        hover:bg-gray-100
-        ;
-    }
-    .page__header div.nav__item {
-        @apply
-        hover:bg-gray-50
-        cursor-default
-        ;
-    }
-    
-    .page__header .nav__item--active {
-        @apply bg-gray-100;
-    }
-    
-    
-    .page__header .nav__item ul.nav__submenu {
+    .page__header .nav__submenu {
         @apply
         hidden
-        mt-2
         block
         absolute
         px-2 py-2
-            /*bg-gray-100*/
         space-y-1
         bg-white
         rounded-md
         shadow
         ;
     }
-    .page__header .nav__item ul.nav__submenu > li > a {
-        @apply
-        block
-        w-full
-        px-2 py-1
-        hover:bg-gray-100
-        rounded-md
-        ;
-    }
     
-    .page__header .nav__item--with-submenu:hover ul.nav__submenu {
-        @apply block;
-    }
     
+    .page__header .nav__submenu > .nav__item > a,
+    .page__header .nav__submenu > .nav__item > span {
+        @apply w-full px-2;
+    }
     
     
     .page__footer {

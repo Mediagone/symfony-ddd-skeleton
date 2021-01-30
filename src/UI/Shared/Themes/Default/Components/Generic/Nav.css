@@ -1,0 +1,79 @@
+@layer components {
+    
+    .nav__title,
+    .nav__item {
+        @apply
+        relative
+        min-h-10 leading-10
+        font-medium
+        transition-colors duration-200
+        text-gray-500
+        cursor-default
+        ;
+    }
+
+    .nav__item > a,
+    .nav__item > span {
+        @apply
+        flex
+        flex-row
+        items-center
+        h-full px-3
+        rounded-md
+        ;
+    }
+    
+    
+    .nav__item > a {
+        @apply hover:bg-gray-100;
+    }
+    
+    .nav__item--active > a {
+        @apply bg-gray-100;
+    }
+    
+    .nav__item > span {
+        @apply hover:bg-gray-50;
+    }
+
+
+
+
+    .nav__submenu > .nav__item {
+        @apply
+        min-h-8
+        leading-8
+        ;
+    }
+    
+    .nav__item--with-submenu:hover >.nav__submenu {
+        @apply block;
+    }
+
+
+
+    .nav__badges {
+        @apply
+        flex
+        flex-row
+        float-right
+        h-full
+        items-center
+        space-x-0.5
+        ;
+    }
+
+    .nav__badge {
+        @apply
+        flex flex-none
+        px-1.5
+        h-4 leading-4
+        font-bold
+        text-xs
+        text-white
+        rounded
+        ;
+    }
+    
+    
+}

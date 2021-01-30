@@ -8,101 +8,16 @@
     }
 
     .sidebar .nav {
-        @apply
-        py-6
-        px-3
-        ;
+        @apply py-6 px-3;
     }
 
     .sidebar .nav .nav__title,
     .sidebar .nav .nav__item {
-        @apply
-        min-h-10
-        leading-10
-        relative
-        mt-0.5
-        cursor-default
-        ;
+        @apply mt-0.5;
     }
 
-    .sidebar .nav .nav__item .nav__submenu {
-        @apply
-        pl-4
-        ;
-    }
-
-    .sidebar .nav .nav__item .nav__submenu > .nav__item {
-        @apply
-        min-h-8
-        leading-8
-        ;
-    }
-
-    .sidebar .nav .nav__item > span {
-        @apply
-        px-2
-        cursor-default
-        hover:bg-gray-50
-        cursor-default
-        ;
-    }
-
-    .sidebar .nav .nav__item > a,
-    .sidebar .nav .nav__item > span {
-        @apply
-        px-2
-        w-full
-        h-full
-        flex
-        flex-row
-        items-center
-        hover:bg-gray-100
-        rounded-md
-        ;
-    }
-
-    /*.sidebar .nav > .nav__item > span {*/
-    /*    @apply*/
-    /*    hover:bg-gray-50*/
-    /*    ;*/
-    /*}*/
-
-    .sidebar .nav .nav__item--active > a {
-        @apply bg-gray-100;
-    }
-
-    .sidebar .nav .nav__item > a svg {
-        @apply
-        h-5
-        w-5
-        inline-block
-        mr-1
-        ;
-    }
-
-
-    .sidebar .nav .nav__item div.nav__badges {
-        @apply
-        flex
-        flex-row
-        float-right
-        h-full
-        items-center
-        space-x-0.5
-        ;
-    }
-
-    .sidebar .nav .nav__item .nav__badge {
-        @apply
-        flex flex-none
-        text-white
-        px-1.5
-        text-xs
-        font-bold
-        rounded
-        h-4
-        leading-4
-        ;
+    .sidebar .nav__submenu {
+        @apply pl-4;
     }
     
     

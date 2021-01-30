@@ -20,6 +20,16 @@ module.exports = {
             xl: '1440px',
         },
         extend: {
+            colors: {
+                primary: colors.gray,
+            },
+            minHeight: {
+                '8': '2rem',
+                '10': '2.5rem',
+            },
+            minWidth: {
+                '48': '12rem',
+            }
         }
     },
     variants: {

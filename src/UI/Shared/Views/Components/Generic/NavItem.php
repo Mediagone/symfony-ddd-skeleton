@@ -35,14 +35,6 @@ final class NavItem
     }
 
 
-    private string $fa;
-
-    public function getFa() : string
-    {
-        return $this->fa;
-    }
-
-
     private bool $isDisplayed;
 
     public function isDisplayed() : bool
@@ -106,7 +98,6 @@ final class NavItem
         $this->header = $data['header'] ?? '';
         $this->label = $data['label'] ?? '';
         $this->href = $data['href'] ?? '';
-        $this->fa = $data['fa'] ?? '';
         $this->attrClass = $data['attrClass'] ?? '';
         $this->isDisplayed = ($data['visible'] ?? true) === true;
         $this->submenuIndicatorHtml = $submenuIndicatorHtml;
