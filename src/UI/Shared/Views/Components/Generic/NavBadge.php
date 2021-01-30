@@ -3,9 +3,7 @@
 namespace App\UI\Shared\Views\Components\Generic;
 
 
-use InvalidArgumentException;
-
-final class Badge
+final class NavBadge
 {
     //========================================================================================================
     // Properties
@@ -19,11 +17,19 @@ final class Badge
     }
     
     
-    private string $type;
-    
-    public function getType() : string
+    private string $title;
+
+    public function getTitle() : string
     {
-        return $this->type;
+        return $this->title;
+    }
+    
+    
+    private string $attrClass;
+    
+    public function getAttrClass() : string
+    {
+        return $this->attrClass;
     }
     
     
@@ -35,11 +41,8 @@ final class Badge
     public function __construct(array $data)
     {
         $this->label = $data['label'] ?? '';
-        $this->type = $data['type'] ?? 'default';
-        
-        if (!in_array($this->type, ['default','success','danger','warning','info','primary'])) {
-            throw new InvalidArgumentException('Unsupported badge type ('.$this->type.'), supported values are: default, success, danger, warning, info, primary.');
-        }
+        $this->title = $data['title'] ?? '';
+        $this->attrClass = $data['attrClass'] ?? '';
     }
     
     

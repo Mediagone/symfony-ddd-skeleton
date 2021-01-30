@@ -123,7 +123,7 @@ final class NavItem
     
     private function buildBadges(array $badges) : array
     {
-        return array_map(static fn($badge) => new Badge($badge), $badges);
+        return array_map(static fn($badge) => new NavBadge($badge), $badges);
     }
     
     

@@ -12,7 +12,7 @@
                 <span class="flex flex-grow items-center space-x-2 whitespace-nowrap">{{ ITEM.label|raw }}</span>
                 {% if ITEM.badges is not empty %}
                 <div class="nav__badges">
-                    {% for badge in ITEM.badges %}<div class="nav__badge {{ badge.attrClass }}">{{ badge.label }}</div>{% endfor %}
+                    {% for badge in ITEM.badges %}<div class="nav__badge {{ badge.AttrClass }}" {% if badge.Title %}title="{{ badge.Title }}"{% endif %}>{{ badge.Label }}</div>{% endfor %}
                 </div>
                 {% endif %}
             {% if ITEM.href %}</a>{% else %}</span>{% endif %}
