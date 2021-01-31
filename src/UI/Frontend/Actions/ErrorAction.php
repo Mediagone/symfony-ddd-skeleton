@@ -18,7 +18,7 @@ final class ErrorAction
     {
         $flattenException = $errorRenderer->render($exception);
         
-        if ($kernelDebug) {
+        if ($kernelDebug && $exception->getMessage() !== 'This is a sample exception.') {
             return new Response($flattenException->getAsString(), $flattenException->getStatusCode(), $flattenException->getHeaders());
         }
         
