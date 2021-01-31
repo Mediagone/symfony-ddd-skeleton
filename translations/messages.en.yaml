@@ -13,16 +13,43 @@ login:
         error_csrf_html: "Une erreur inattendue est survenue, merci de réessayer !"
         error_credentials_html: "Les identifiants spécifiés ne sont pas valides, merci de réessayer !"
 
-account:
-    lastname: Last name
-    forename: Forename
-    email: Email
-    password: Password
+
+
+
+
+
+entities:
+    account:
+        lastname:
+            label: Name
+            validation:
+                invalid: Name contains invalid characters
+                not_blank: Name cannot be blank
+        forename:
+            label: Forename
+            validation:
+                invalid: Forename contains invalid characters
+                not_blank: Forename cannot be blank
+        email:
+            label: Email
+            validation:
+                invalid: Email must follow valid format (eg. name@example.com)
+                not_blank: Email cannot be blank
+        password:
+            label: Password
+            validation:
+                not_blank:  
     
     
 form:
-    save: Save
-    modify: Modify
+    buttons:
+        save: Save
+        modify: Modify
+        
+    flashes:
+        successful_operation: Operation successful!
+        invalid_data: Oops! The form contains some errors.
+        unexpected_error: An unexpected error occured.
 
 
 components:

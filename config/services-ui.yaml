@@ -29,6 +29,7 @@ services:
 
     # Loads some UI's classes as services
     App\UI\:
-        resource: '../src/UI/*/Services'
+        resource: '../src/UI/*/{Forms,Services}'
 
+    # Use custom error controller
     Symfony\Component\ErrorHandler\ErrorRenderer\ErrorRendererInterface: '@twig.error_renderer.html'

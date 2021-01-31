@@ -42,6 +42,11 @@ final class Account
         return $this->lastname;
     }
 
+    public function setLastname(Name $name) : void
+    {
+        $this->lastname = $name;
+    }
+
 
     /** @Column(type="app_name") */
     private Name $forename;
@@ -49,6 +54,11 @@ final class Account
     public function getForename() : Name
     {
         return $this->forename;
+    }
+
+    public function setForename(Name $name) : void
+    {
+        $this->forename = $name;
     }
     
     
@@ -58,6 +68,11 @@ final class Account
     public function getEmail() : EmailAddress
     {
         return $this->email;
+    }
+
+    public function setEmail(EmailAddress $email) : void
+    {
+        $this->email = $email;
     }
     
     

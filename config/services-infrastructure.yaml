@@ -17,8 +17,14 @@ services:
     # Loads all Infrastructure's classes as services
     App\Infrastructure\:
         resource: ../src/Infrastructure/
-
-
+    
+    
+    # Loads all Domain's commands as services
+    App\Domain\:
+        resource: ../src/Domain/*/*/Command
+    
+    
+    
     #-------------------------------------------------------------------------------------------------------------------
     # Command Bus
     #-------------------------------------------------------------------------------------------------------------------
