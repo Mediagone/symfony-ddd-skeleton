@@ -14,7 +14,8 @@ login:
         error_credentials_html: "Les identifiants spécifiés ne sont pas valides, merci de réessayer !"
 
 account:
-    name: Name
+    lastname: Last name
+    forename: Forename
     email: Email
     password: Password
     

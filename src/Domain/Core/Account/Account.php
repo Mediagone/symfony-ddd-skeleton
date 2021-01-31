@@ -32,14 +32,23 @@ final class Account
     {
         return $this->id;
     }
-    
-    
+
+
     /** @Column(type="app_name") */
-    private Name $name;
-    
-    public function getName() : Name
+    private Name $lastname;
+
+    public function getLastname() : Name
     {
-        return $this->name;
+        return $this->lastname;
+    }
+
+
+    /** @Column(type="app_name") */
+    private Name $forename;
+
+    public function getForename() : Name
+    {
+        return $this->forename;
     }
     
     
@@ -66,10 +75,11 @@ final class Account
     // Constructor
     //========================================================================================================
     
-    public function __construct(Ulid $id, Name $name, EmailAddress $email, Hash $password)
+    public function __construct(Ulid $id, Name $forename, Name $lastname, EmailAddress $email, Hash $password)
     {
         $this->id = $id;
-        $this->name = $name;
+        $this->forename = $forename;
+        $this->lastname = $lastname;
         $this->email = $email;
         $this->password = $password;
     }

@@ -5,6 +5,7 @@ namespace App\Infrastructure\Fixtures;
 use App\Domain\Core\Account\Account;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+use Mediagone\Common\Types\Crypto\HashArgon2id;
 use Mediagone\Common\Types\Crypto\HashBcrypt;
 use Mediagone\Common\Types\Text\Name;
 use Mediagone\Common\Types\Web\EmailAddress;
@@ -32,6 +33,7 @@ final class AccountFixtures extends Fixture
     {
         $account = new Account(
             new Ulid('01ESTQSNZDJCC5GGVZ1PBYJQER'),
+            Name::fromString(''),
             Name::fromString('Admin'),
             EmailAddress::fromString('admin@dev.com'),
             HashBcrypt::fromString('pass')
