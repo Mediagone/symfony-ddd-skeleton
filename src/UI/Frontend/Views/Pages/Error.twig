@@ -1,0 +1,17 @@
+{% extends 'Frontend/Views/FrontendLayout.twig' %}
+{% expect 'App\\UI\\Frontend\\Views\\Pages\\Error' as MODEL %}
+
+
+{% block PAGE_TITLE %}Unexpected Error{% endblock %}
+
+
+{% block PAGE_CONTENT %}
+
+        <section>
+            <div class="page__wrapper w-responsive text-center mt-24">
+                <h1 class="text-8xl">{{ MODEL.StatusCode }}<div class="text-5xl">Error</div></h1>
+                <div>Sorry, we're experiencing an error, please try again later.</div>
+            </div>
+        </section>
+        
+{% endblock %}

@@ -2,8 +2,10 @@
 
 namespace App\UI\Frontend\Actions;
 
+use App\UI\Frontend\Views\Pages\Error;
 use App\UI\Shared\Services\ControllerResponses;
 use Symfony\Component\ErrorHandler\ErrorRenderer\ErrorRendererInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Throwable;
 
@@ -30,12 +32,16 @@ final class ErrorAction
                 $templateName = 'Error404';
                 break;
             case 500:
-            default:
                 $templateName = 'Error500';
+                break;
+            default:
+                $templateName = 'Error';
                 break;
         }
         
-        return $responses->template("Frontend/Views/Pages/$templateName.twig", []);
+        return $responses->template("Frontend/Views/Pages/$templateName.twig", [
+            'MODEL' => new Error($flattenException->getStatusCode()),
+        ]);
     }
     
     
