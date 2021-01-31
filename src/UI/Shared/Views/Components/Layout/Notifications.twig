@@ -1,0 +1,42 @@
+{% expect 'string' as DOMAIN %}
+
+{% apply spaceless %}
+    {% if app.request.hasPreviousSession %} {# prevents starting a session when there are no flash messages #}
+    <div class="notifications">
+        <div>
+        {% for messages in app.flashes([DOMAIN]) %}
+            {% for i, notification in messages %}
+                {% set notification = notification|json_decode %}
+                
+                {% if notification.type == 'success' %}
+                    {% set styleClasses = 'bg-green-200 text-green-600' %}
+                {% elseif notification.type == 'notice' %}
+                    {% set styleClasses = 'bg-blue-200 text-blue-600' %}
+                {% elseif notification.type == 'warning' %}
+                    {% set styleClasses = 'bg-yellow-200 text-yellow-600' %}
+                {% elseif notification.type == 'alert' %}
+                    {% set styleClasses = 'bg-red-200 text-red-600' %}
+                {% else %}
+                    {% set styleClasses = '' %}
+                {% endif %}
+                
+                <div class="notifications__popup {{ styleClasses }}">
+                    <div class="m-auto w-responsive px-12">
+                        <span>{{ notification.message|trans|raw }}</span>
+                        <span class="notifications__close-btn" title="{{ 'components.layout.notifications.close'|trans }}">
+                            <svg class="h-6 w-6" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+                        </span>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+{% endapply %}
+
+{% register once in 'bodyJs' %}
+    $('.notifications__close-btn').click(function() {
+        $(this).parents('.notifications__popup').fadeOut(300, function(){ $(this).remove(); });
+    });
+{% endregister %}

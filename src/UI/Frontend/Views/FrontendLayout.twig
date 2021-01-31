@@ -52,7 +52,9 @@
 
     {% block PAGE_MAIN %}
     <main class="main">
-            {% block PAGE_CONTENT %}{% endblock %}
+        {% block PAGE_CONTENT %}{% endblock %}
+
+        {% include 'Shared/Views/Components/Layout/Notifications.twig' with { DOMAIN:'frontend' } only %}
     </main>
     {% endblock %}
 

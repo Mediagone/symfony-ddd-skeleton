@@ -1,0 +1,33 @@
+@layer components {
+    
+    .notifications {
+        @apply
+            fixed
+            bottom-0
+            right-0
+            w-full
+            z-50
+        ;
+    }
+    
+    
+    .notifications__popup {
+        @apply
+            px-7 py-5
+            text-base
+        ;
+    }
+    
+    
+    .notifications__close-btn {
+        @apply
+            text-lg
+            font-bold
+            pl-10
+            float-right
+            cursor-pointer
+        ;
+    }
+    
+    
+}

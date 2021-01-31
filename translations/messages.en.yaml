@@ -22,3 +22,9 @@ account:
 form:
     save: Save
     modify: Modify
+
+
+components:
+    layout:
+        notifications:
+            close: Close this notification

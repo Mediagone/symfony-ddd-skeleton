@@ -5,6 +5,7 @@
 @import "Components/Sidebar.css";
 @import "Components/ThinBox.css";
 @import "Components/Generic/Nav.css";
+@import "Components/Layout/Notifications.css";
 @import "Utilities/Responsive.css";
 
 @tailwind base;
