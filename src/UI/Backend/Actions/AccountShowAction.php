@@ -2,6 +2,7 @@
 
 namespace App\UI\Backend\Actions;
 
+use App\Domain\Core\Account\Account;
 use App\Domain\Core\Account\Command\ModifyAccount;
 use App\Domain\Core\Account\Query\OneAccount;
 use App\UI\Backend\Forms\AccountEditForm;
@@ -23,26 +24,19 @@ use Symfony\Component\Uid\Ulid;
 
 
 /**
- * @Route("/admin/accounts/{id}", name="backend_account_show", methods={"GET|POST"})
+ * @Route("/admin/accounts/{accountId}", name="backend_account_show", methods={"GET|POST"})
  */
 final class AccountShowAction
 {
     public function __invoke(
-        string $id,
+        Account $account,
         Request $request,
-        QueryBus $queryBus,
         CommandBus $commandBus,
         ControllerFlashes $flashes,
         ControllerResponses $responses,
         FormFactoryInterface $formFactory
     ) : Response
     {
-        $account = $queryBus->find(OneAccount::asEntity()->byId(new Ulid($id)));
-        if (! $account) {
-            throw new NotFoundHttpException("Account not found ($id).");
-        }
-        
-        
         $form = $formFactory->create(AccountEditForm::class, new AccountEditFormData($account));
         $form->handleRequest($request);
         
