@@ -2,7 +2,6 @@
 
 namespace App\UI\Frontend\Actions;
 
-use App\UI\Backend\Views\Components\BackendHeader;
 use App\UI\Frontend\Views\Pages\SecurityLogin;
 use App\UI\Shared\Services\ControllerFlashes;
 use App\UI\Shared\Services\ControllerResponses;
