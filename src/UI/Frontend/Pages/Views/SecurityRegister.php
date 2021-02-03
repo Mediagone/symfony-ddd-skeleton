@@ -1,20 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace App\UI\Frontend\Views\Pages;
+namespace App\UI\Frontend\Pages\Views;
 
 
-final class SecurityLogin
+final class SecurityRegister
 {
     //========================================================================================================
     // Properties
     //========================================================================================================
-
-    private string $lastUsername;
-    
-    public function getLastUsername() : string
-    {
-        return $this->lastUsername;
-    }
     
     
     
@@ -22,9 +15,9 @@ final class SecurityLogin
     // Constructor
     //========================================================================================================
 
-    public function __construct(string $lastUsername)
+    public function __construct()
     {
-        $this->lastUsername = $lastUsername;
+        
     }
     
     

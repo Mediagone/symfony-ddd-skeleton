@@ -1,35 +1,26 @@
 <?php declare(strict_types=1);
 
-namespace App\UI\Backend\Views\Pages;
-
-use App\Domain\Core\Account\Account;
+namespace App\UI\Backend\Pages\Views;
 
 
-final class AccountList
+final class Dashboard
 {
     //========================================================================================================
     // Properties
     //========================================================================================================
-    
-    private array $accounts;
-    
-    public function getAccounts() : array
-    {
-        return $this->accounts;
-    }
-    
-    
-    
+
+
+
+
     //========================================================================================================
     // Constructor
     //========================================================================================================
 
-
-    public function __construct(array $accounts)
+    public function __construct()
     {
-        $this->accounts = (static fn(Account... $accounts) => $accounts)(...$accounts);
+
     }
-    
+
 
 
 }

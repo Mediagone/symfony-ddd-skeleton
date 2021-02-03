@@ -1,6 +1,5 @@
-{% extends 'Backend/Views/BackendLayout.twig' %}
-
-{% expect 'App\\UI\\Backend\\Views\\Pages\\AccountShow' as MODEL %}
+{% extends 'Backend/Pages/BackendLayout.twig' %}
+{% expect 'App\\UI\\Backend\\Pages\\Views\\AccountShow' as MODEL %}
 
 
 {% block PAGE_TITLE %}Account - {{ MODEL.Account.Forename.toString ~ ' ' ~ MODEL.Account.Lastname.toString }}{% endblock %}

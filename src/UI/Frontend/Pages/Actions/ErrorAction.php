@@ -1,11 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace App\UI\Frontend\Actions;
+namespace App\UI\Frontend\Pages\Actions;
 
-use App\UI\Frontend\Views\Pages\Error;
+use App\UI\Frontend\Pages\Views\Error;
 use App\UI\Shared\Services\ControllerResponses;
 use Symfony\Component\ErrorHandler\ErrorRenderer\ErrorRendererInterface;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Throwable;
 
@@ -39,7 +38,7 @@ final class ErrorAction
                 break;
         }
         
-        return $responses->template("Frontend/Views/Pages/$templateName.twig", [
+        return $responses->template("Frontend/Pages/Views/$templateName.twig", [
             'MODEL' => new Error($flattenException->getStatusCode()),
         ]);
     }

@@ -1,26 +1,22 @@
 <?php declare(strict_types=1);
 
-namespace App\UI\Backend\Actions;
+namespace App\UI\Backend\Pages\Actions;
 
 use App\Domain\Core\Account\Account;
 use App\Domain\Core\Account\Command\ModifyAccount;
-use App\Domain\Core\Account\Query\OneAccount;
 use App\UI\Backend\Forms\AccountEditForm;
 use App\UI\Backend\Forms\AccountEditFormData;
-use App\UI\Backend\Views\Pages\AccountShow;
+use App\UI\Backend\Pages\Views\AccountShow;
 use App\UI\Shared\Services\ControllerFlashes;
 use App\UI\Shared\Services\ControllerResponses;
 use Exception;
 use Mediagone\Common\Types\Text\Name;
 use Mediagone\Common\Types\Web\EmailAddress;
 use Mediagone\CQRS\Bus\Domain\Command\CommandBus;
-use Mediagone\CQRS\Bus\Domain\Query\QueryBus;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Uid\Ulid;
 
 
 /**
@@ -64,7 +60,7 @@ final class AccountShowAction
             }
         }
         
-        return $responses->template('Backend/Views/Pages/AccountShow.twig', [
+        return $responses->template('Backend/Pages/Views/AccountShow.twig', [
             'MODEL' => new AccountShow($account, $form->createView()),
         ]);
     }
