@@ -1,4 +1,5 @@
 {
+    "name": "mediagone/symfony-ddd-skeleton",
     "type": "project",
     "license": "proprietary",
     "description": "",
