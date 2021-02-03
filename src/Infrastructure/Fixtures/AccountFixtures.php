@@ -40,6 +40,15 @@ final class AccountFixtures extends Fixture
         );
         $em->persist($account);
         
+        $account = new Account(
+            new Ulid(),
+            Name::fromString('Bob'),
+            Name::fromString('Dev'),
+            EmailAddress::fromString('bob@dev.com'),
+            HashArgon2id::fromString('pass')
+        );
+        $em->persist($account);
+        
         $em->flush();
     }
     
