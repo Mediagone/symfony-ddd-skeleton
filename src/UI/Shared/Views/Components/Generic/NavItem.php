@@ -41,10 +41,10 @@ final class NavItem
     {
         return $this->isDisplayed;
     }
-    
-    
+
+
     private array $items;
-    
+
     public function getItems() : array
     {
         return $this->items;
@@ -86,13 +86,13 @@ final class NavItem
     {
         return $this->submenuAttrClass;
     }
-    
+
 
 
     //========================================================================================================
     // Constructor
     //========================================================================================================
-    
+
     public function __construct(array $data, string $submenuIndicatorHtml, string $submenuAttrClass)
     {
         $this->header = $data['header'] ?? '';
@@ -105,13 +105,13 @@ final class NavItem
         $this->items = $this->buildSubItems($data['items'] ?? []);
         $this->badges = $this->buildBadges($data['badges'] ?? []);
     }
-    
-    
-    
+
+
+
     //========================================================================================================
     // Helpers
     //========================================================================================================
-    
+
     private function buildSubItems(array $items) : array
     {
         return array_filter(
@@ -119,13 +119,30 @@ final class NavItem
             static fn($item) => $item->isDisplayed()
         );
     }
-    
-    
+
+
     private function buildBadges(array $badges) : array
     {
         return array_map(static fn($badge) => new NavBadge($badge), $badges);
     }
-    
-    
-    
+
+
+
+    //========================================================================================================
+    // Helpers
+    //========================================================================================================
+
+    public function getSubHrefs() : iterable
+    {
+        foreach ($this->items as $item) {
+            if ($item->href) {
+                yield $item->href;
+            }
+
+            yield from $item->getSubHrefs();
+        }
+    }
+
+
+
 }

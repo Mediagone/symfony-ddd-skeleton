@@ -8,9 +8,18 @@ module.exports = {
         require('autoprefixer'),
     ],
     purge: {
-      content: [
-          './src/UI/**/Views/**/*.twig',
-    ]},
+        content: [
+            './src/UI/**/Views/**/*.twig',
+            './src/UI/**/*Layout.twig',
+        ],
+        options: {
+            safelist: [
+                /^--/,
+                /[disabled]/,
+                'form__errors'
+            ],
+        },
+    },
     theme: {
         screens: {
             xs: '320px',

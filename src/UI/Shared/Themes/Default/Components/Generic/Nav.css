@@ -28,7 +28,7 @@
         @apply hover:bg-gray-100;
     }
     
-    .nav__item--active > a {
+    .nav__item.--active > a {
         @apply bg-gray-100;
     }
     
@@ -46,7 +46,7 @@
         ;
     }
     
-    .nav__item--with-submenu:hover >.nav__submenu {
+    .nav__item.--with-submenu:hover >.nav__submenu {
         @apply block;
     }
 

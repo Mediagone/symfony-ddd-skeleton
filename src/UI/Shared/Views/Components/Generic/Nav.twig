@@ -3,7 +3,7 @@
 {% apply spaceless %}
     <nav class="nav {{ NAV.AttrClass }}">
         {% for item in NAV.items %}
-            {% include('Shared/Views/Components/Generic/NavItem.twig') with {ITEM:item} only %}
+            {% include('Shared/Views/Components/Generic/NavItem.twig') with { ITEM:item, NAV:NAV, PARENT:null } only %}
         {% endfor %}
     </nav>
 {% endapply %}
