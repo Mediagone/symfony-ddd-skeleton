@@ -13,14 +13,10 @@ services:
             
 
     # Tag controllers classes to make sure services can be injected as action arguments.
-    App\UI\Backend\Pages\Actions\:
-        resource: '../src/UI/Backend/Pages/Actions/'
+    app.controllers:
+        namespace: App\UI\
+        resource: '../src/UI/*/*Action.php'
         tags: ['controller.service_arguments']
-
-    App\UI\Frontend\Pages\Actions\:
-        resource: '../src/UI/Frontend/Pages/Actions/'
-        tags: ['controller.service_arguments']
-
     
     # Load third-party Twig extensions.
     Mediagone\Twig\PowerPack\TwigPowerPackExtension:

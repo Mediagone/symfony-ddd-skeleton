@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace App\UI\Frontend\Pages\Actions;
+namespace App\UI\Frontend;
 
 use LogicException;
 use Symfony\Component\HttpFoundation\Response;

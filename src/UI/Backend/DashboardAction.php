@@ -1,27 +1,26 @@
 <?php declare(strict_types=1);
 
-namespace App\UI\Frontend\Pages\Actions;
+namespace App\UI\Backend;
 
-use App\UI\Frontend\Pages\Views\Index;
+use App\UI\Backend\Views\Pages\Dashboard;
 use App\UI\Shared\Services\ControllerResponses;
-use Mediagone\CQRS\Bus\Domain\Query\QueryBus;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 
 /**
- * @Route("/", name="frontend_index", methods={"GET"})
+ * @Route("/admin", name="backend_dashboard", methods={"GET"})
  */
-final class IndexAction
+final class DashboardAction
 {
     //========================================================================================================
     // Action
     //========================================================================================================
     
-    public function __invoke(ControllerResponses $responses, QueryBus $queryBus) : Response
+    public function __invoke(ControllerResponses $responses) : Response
     {
-        return $responses->template('Frontend/Pages/Views/Index.twig', [
-            'MODEL' => new Index(),
+        return $responses->template('Backend/Views/Pages/Dashboard.twig', [
+            'MODEL' => new Dashboard(),
         ]);
     }
     

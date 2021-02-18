@@ -1,30 +1,19 @@
 <?php declare(strict_types=1);
 
-namespace App\UI\Backend\Pages\Views;
-
-use App\Domain\Core\Account\Account;
-use Symfony\Component\Form\FormView;
+namespace App\UI\Frontend\Views\Pages;
 
 
-final class AccountShow
+final class Error
 {
     //========================================================================================================
     // Properties
     //========================================================================================================
+
+    private int $statusCode;
     
-    private Account $account;
-    
-    public function getAccount() : Account
+    public function getStatusCode() : int
     {
-        return $this->account;
-    }
-    
-    
-    private FormView $accountEditForm;
-    
-    public function getAccountEditForm() : FormView
-    {
-        return $this->accountEditForm;
+        return $this->statusCode;
     }
     
     
@@ -33,10 +22,9 @@ final class AccountShow
     // Constructor
     //========================================================================================================
     
-    public function __construct(Account $account, FormView $form)
+    public function __construct(int $statusCode)
     {
-        $this->account = $account;
-        $this->accountEditForm = $form;
+        $this->statusCode = $statusCode;
     }
     
     

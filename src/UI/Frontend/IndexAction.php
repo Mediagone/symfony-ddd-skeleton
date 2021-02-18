@@ -1,9 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace App\UI\Backend\Pages\Actions;
+namespace App\UI\Frontend;
 
-use App\Domain\Core\Account\Query\ManyAccount;
-use App\UI\Backend\Pages\Views\AccountList;
+use App\UI\Frontend\Views\Pages\Index;
 use App\UI\Shared\Services\ControllerResponses;
 use Mediagone\CQRS\Bus\Domain\Query\QueryBus;
 use Symfony\Component\HttpFoundation\Response;
@@ -11,20 +10,18 @@ use Symfony\Component\Routing\Annotation\Route;
 
 
 /**
- * @Route("/admin/accounts", name="backend_account_list", methods={"GET"})
+ * @Route("/", name="frontend_index", methods={"GET"})
  */
-final class AccountListAction
+final class IndexAction
 {
     //========================================================================================================
     // Action
     //========================================================================================================
     
-    public function __invoke(QueryBus $queryBus, ControllerResponses $responses) : Response
+    public function __invoke(ControllerResponses $responses, QueryBus $queryBus) : Response
     {
-        $users = $queryBus->find(ManyAccount::asEntity());
-
-        return $responses->template('Backend/Pages/Views/AccountList.twig', [
-            'MODEL' => new AccountList($users),
+        return $responses->template('Frontend/Views/Pages/Index.twig', [
+            'MODEL' => new Index(),
         ]);
     }
     

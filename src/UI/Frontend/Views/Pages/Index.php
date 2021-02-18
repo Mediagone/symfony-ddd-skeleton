@@ -1,30 +1,24 @@
 <?php declare(strict_types=1);
 
-namespace App\UI\Frontend\Pages\Views;
+namespace App\UI\Frontend\Views\Pages;
 
 
-final class Error
+final class Index
 {
     //========================================================================================================
     // Properties
     //========================================================================================================
-
-    private int $statusCode;
     
-    public function getStatusCode() : int
-    {
-        return $this->statusCode;
-    }
     
     
     
     //========================================================================================================
     // Constructor
     //========================================================================================================
-    
-    public function __construct(int $statusCode)
+
+    public function __construct()
     {
-        $this->statusCode = $statusCode;
+        
     }
     
     
