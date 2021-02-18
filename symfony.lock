@@ -96,6 +96,9 @@
     "egulias/email-validator": {
         "version": "2.1.24"
     },
+    "friendsofphp/proxy-manager-lts": {
+        "version": "v1.0.3"
+    },
     "laminas/laminas-code": {
         "version": "3.5.1"
     },

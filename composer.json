@@ -18,7 +18,7 @@
         "mediagone/common-types": "^0.3",
         "mediagone/common-types-doctrine": "^0.3",
         "mediagone/cqrs-bus": "^0.4",
-        "mediagone/doctrine-specifications": "^0.1",
+        "mediagone/doctrine-specifications": "^0.2",
         "mediagone/twig-powerpack": "^0.2",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^5.1",
@@ -47,8 +47,8 @@
         "symfony/validator": "5.2.*",
         "symfony/web-link": "5.2.*",
         "symfony/yaml": "5.2.*",
-        "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "twig/extra-bundle": "^3.0",
+        "twig/twig": "^3.0"
     },
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.4",
