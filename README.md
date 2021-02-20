@@ -17,22 +17,22 @@ This package requires **PHP 7.4+**
 - Command and Query bus (CQRS)
 
 - Frontend & Backend example pages
-- Security routes : login, logout
-
+- Security routes : _login, logout_
 
 ### Frontend
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Laravel Mix](https://github.com/JeffreyWay/laravel-mix)
 
+### Backend
+- [Symfony 5.2](https://symfony.com/)
 
-### Installed & configured packages
-#### Official packages
-- PHPUnit
+This skeleton comes with a bunch of installed and pre-configured packages:
+
+- Symfony core 
 - Doctrine & Doctrine migrations
-- Symfony Security : authentication
+- PHPUnit
 
 
-#### Additional Packages
 - [Common Types](https://github.com/Mediagone/common-types)
 - [Common Types for Doctrine](https://github.com/Mediagone/common-types-doctrine)
 - [CQRS Bus](https://github.com/Mediagone/cqrs-bus)
