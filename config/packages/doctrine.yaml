@@ -12,6 +12,7 @@ doctrine:
             app_hashbcrypt: Mediagone\Doctrine\Common\Types\Crypto\HashBcryptType
             app_name: Mediagone\Doctrine\Common\Types\Text\NameType
             app_email: Mediagone\Doctrine\Common\Types\Web\EmailAddressType
+            app_smalluid: Mediagone\SmallUid\Doctrine\SmallUidType
 
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'

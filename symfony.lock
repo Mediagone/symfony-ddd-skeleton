@@ -123,6 +123,9 @@
     "mediagone/small-uid": {
         "version": "0.1.0"
     },
+    "mediagone/small-uid-doctrine": {
+        "version": "0.1.0"
+    },
     "mediagone/twig-powerpack": {
         "version": "0.1.0"
     },
