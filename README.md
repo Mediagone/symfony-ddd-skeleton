@@ -24,15 +24,12 @@ This package requires **PHP 7.4+**
 - [Laravel Mix](https://github.com/JeffreyWay/laravel-mix)
 
 ### Backend
-- [Symfony 5.2](https://symfony.com/)
-
 This skeleton comes with a bunch of installed and pre-configured packages:
 
-- Symfony core 
+- [Symfony 5](https://symfony.com/)
 - Doctrine & Doctrine migrations
-- PHPUnit
-
-
+- PHPUnit 9
+- [Small UID](https://github.com/Mediagone/small-uid)
 - [Common Types](https://github.com/Mediagone/common-types)
 - [Common Types for Doctrine](https://github.com/Mediagone/common-types-doctrine)
 - [CQRS Bus](https://github.com/Mediagone/cqrs-bus)

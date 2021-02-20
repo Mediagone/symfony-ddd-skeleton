@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01700aa91a289af8f694a403214d8ea9",
+    "content-hash": "ec0f6da1a2bf22b04b51fda70e5d320d",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1958,6 +1958,60 @@
                 "source": "https://github.com/Mediagone/doctrine-specifications/tree/0.2.4"
             },
             "time": "2021-02-05T16:38:39+00:00"
+        },
+        {
+            "name": "mediagone/small-uid",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Mediagone/small-uid.git",
+                "reference": "1e7fb56d06150c78a195f542cc3b55257a7b332d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Mediagone/small-uid/zipball/1e7fb56d06150c78a195f542cc3b55257a7b332d",
+                "reference": "1e7fb56d06150c78a195f542cc3b55257a7b332d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gmp": "*",
+                "mediagone/common-types": "^0.3",
+                "php-64bit": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mediagone\\Common\\SmallUid\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruce Suire",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Small Unique Identifier - Quite like an ULID, but half smaller (64 bits).",
+            "keywords": [
+                "UID",
+                "database",
+                "entity",
+                "guid",
+                "primary key",
+                "ulid",
+                "uuid"
+            ],
+            "support": {
+                "issues": "https://github.com/Mediagone/small-uid/issues",
+                "source": "https://github.com/Mediagone/small-uid/tree/0.1.0"
+            },
+            "time": "2021-02-20T11:14:42+00:00"
         },
         {
             "name": "mediagone/twig-powerpack",
