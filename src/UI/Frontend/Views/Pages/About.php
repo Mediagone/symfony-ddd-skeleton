@@ -3,7 +3,7 @@
 namespace App\UI\Frontend\Views\Pages;
 
 
-final class Index
+final class About
 {
     //========================================================================================================
     // Properties

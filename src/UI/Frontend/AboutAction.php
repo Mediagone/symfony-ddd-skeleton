@@ -2,7 +2,7 @@
 
 namespace App\UI\Frontend;
 
-use App\UI\Frontend\Views\Pages\Index;
+use App\UI\Frontend\Views\Pages\About;
 use App\UI\Shared\Services\ControllerResponses;
 use Mediagone\CQRS\Bus\Domain\Query\QueryBus;
 use Symfony\Component\HttpFoundation\Response;
@@ -10,9 +10,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 
 /**
- * @Route("/", name="frontend_index", methods={"GET"})
+ * @Route("/", name="frontend_about", methods={"GET"})
  */
-final class IndexAction
+final class AboutAction
 {
     //========================================================================================================
     // Action
@@ -20,8 +20,8 @@ final class IndexAction
     
     public function __invoke(ControllerResponses $responses, QueryBus $queryBus) : Response
     {
-        return $responses->template('Frontend/Views/Pages/Index.twig', [
-            'MODEL' => new Index(),
+        return $responses->template('Frontend/Views/Pages/About.twig', [
+            'MODEL' => new About(),
         ]);
     }
     
