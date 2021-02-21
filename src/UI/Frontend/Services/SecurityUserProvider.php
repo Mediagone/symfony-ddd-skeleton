@@ -6,12 +6,12 @@ use App\Domain\Core\Account\Query\OneAccount;
 use App\UI\Frontend\Data\SecurityUser;
 use Mediagone\Common\Types\Web\EmailAddress;
 use Mediagone\CQRS\Bus\Domain\Query\QueryBus;
+use Mediagone\SmallUid\SmallUid;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\Exception\BadCredentialsException;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
-use Symfony\Component\Uid\Ulid;
 use Throwable;
 use function get_class;
 
@@ -74,7 +74,7 @@ final class SecurityUserProvider implements UserProviderInterface
         
         $userId = $user->getIdentifier();
         $account = $this->queryBus->find(
-            OneAccount::asEntity()->byId(new Ulid($userId))
+            OneAccount::asEntity()->byId(SmallUId::fromString($userId))
         );
         
         if ($account === null) {

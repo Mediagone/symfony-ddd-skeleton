@@ -6,12 +6,15 @@ use App\Domain\Core\Account\Account;
 use App\Domain\Core\Account\Query\OneAccount;
 use InvalidArgumentException;
 use Mediagone\CQRS\Bus\Domain\Query\QueryBus;
+use Mediagone\SmallUid\SmallUid;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\ParamConverterInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Symfony\Component\Uid\Ulid;
 
+/**
+ * Supply any controller parameter "$account" from a route attribute "accountId".
+ */
 final class AccountConverter implements ParamConverterInterface
 {
     //========================================================================================================
@@ -46,7 +49,7 @@ final class AccountConverter implements ParamConverterInterface
     {
         try {
             $accountId = $request->get('accountId');
-            $uid = new Ulid($accountId);
+            $uid = SmallUid::fromString($accountId);
         }
         catch (InvalidArgumentException $ex) {
             throw new NotFoundHttpException($ex->getMessage());

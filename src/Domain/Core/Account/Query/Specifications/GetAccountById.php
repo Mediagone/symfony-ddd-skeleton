@@ -5,7 +5,7 @@ namespace App\Domain\Core\Account\Query\Specifications;
 use Doctrine\ORM\Query;
 use Doctrine\ORM\QueryBuilder;
 use Mediagone\Doctrine\Specifications\Specification;
-use Symfony\Component\Uid\Ulid;
+use Mediagone\SmallUid\SmallUid;
 
 
 final class GetAccountById implements Specification
@@ -14,7 +14,7 @@ final class GetAccountById implements Specification
     // Properties
     //========================================================================================================
 
-    private Ulid $id;
+    private SmallUid $id;
     
     
     
@@ -22,13 +22,13 @@ final class GetAccountById implements Specification
     // Constructors
     //========================================================================================================
     
-    private function __construct(Ulid $id)
+    private function __construct(SmallUid $id)
     {
         $this->id = $id;
     }
     
     
-    public static function specification(Ulid $id) : self
+    public static function specification(SmallUid $id) : self
     {
         return new self($id);
     }
@@ -43,7 +43,7 @@ final class GetAccountById implements Specification
     {
         $builder
             ->andWhere("account.id = :id")
-            ->setParameter('id', $this->id, 'ulid')
+            ->setParameter('id', $this->id, 'app_smalluid')
         ;
     }
     

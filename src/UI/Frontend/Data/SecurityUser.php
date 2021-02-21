@@ -31,7 +31,7 @@ final class SecurityUser implements UserInterface, Serializable, EquatableInterf
     public function __construct(Account $account)
     {
         $this->account = $account;
-        $this->accountId = $account->getId()->toBase32();
+        $this->accountId = $account->getId()->toString();
         $this->accountEmail = $this->account->getEmail()->toString();
     }
     

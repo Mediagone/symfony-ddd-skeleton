@@ -8,7 +8,7 @@ use App\Domain\Core\Account\Query\Specifications\SelectAccountEntity;
 use Mediagone\Common\Types\Web\EmailAddress;
 use Mediagone\CQRS\Bus\Domain\Query\SpecificationQuery;
 use Mediagone\Doctrine\Specifications\SpecificationRepositoryResult;
-use Symfony\Component\Uid\Ulid;
+use Mediagone\SmallUid\SmallUid;
 
 
 final class OneAccount extends SpecificationQuery
@@ -28,7 +28,7 @@ final class OneAccount extends SpecificationQuery
     // Methods
     //========================================================================================================
     
-    public function byId(Ulid $id) : self
+    public function byId(SmallUid $id) : self
     {
         $this->addSpecification(GetAccountById::specification($id));
         return $this;

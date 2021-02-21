@@ -8,7 +8,7 @@ use Mediagone\Common\Types\Crypto\HashArgon2id;
 use Mediagone\Common\Types\Crypto\HashBcrypt;
 use Mediagone\Common\Types\Text\Name;
 use Mediagone\Common\Types\Web\EmailAddress;
-use Symfony\Component\Uid\Ulid;
+use Mediagone\SmallUid\SmallUid;
 
 
 final class FixturesAccount
@@ -16,7 +16,7 @@ final class FixturesAccount
     public static function load(ObjectManager $em) : void
     {
         $account = new Account(
-            new Ulid('01ESTQSNZDJCC5GGVZ1PBYJQER'),
+            SmallUid::fromString('1GUDp752fwX'),
             Name::fromString('Mr'),
             Name::fromString('Admin'),
             EmailAddress::fromString('admin@dev.com'),
@@ -25,7 +25,7 @@ final class FixturesAccount
         $em->persist($account);
         
         $account = new Account(
-            new Ulid(),
+            SmallUid::fromString('5X7Xks6hxoX'),
             Name::fromString('John'),
             Name::fromString('Doe'),
             EmailAddress::fromString('john@dev.com'),

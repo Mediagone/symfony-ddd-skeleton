@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping\Table;
 use Mediagone\Common\Types\Crypto\Hash;
 use Mediagone\Common\Types\Text\Name;
 use Mediagone\Common\Types\Web\EmailAddress;
-use Symfony\Component\Uid\Ulid;
+use Mediagone\SmallUid\SmallUid;
 
 
 /**
@@ -24,11 +24,11 @@ final class Account
     
     /**
      * @Id
-     * @Column(type="ulid") 
+     * @Column(type="app_smalluid")
      */
-    private Ulid $id;
+    private SmallUid $id;
     
-    public function getId() : Ulid
+    public function getId() : SmallUid
     {
         return $this->id;
     }
@@ -90,7 +90,7 @@ final class Account
     // Constructor
     //========================================================================================================
     
-    public function __construct(Ulid $id, Name $forename, Name $lastname, EmailAddress $email, Hash $password)
+    public function __construct(SmallUid $id, Name $forename, Name $lastname, EmailAddress $email, Hash $password)
     {
         $this->id = $id;
         $this->forename = $forename;
