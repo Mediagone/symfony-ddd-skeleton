@@ -6,7 +6,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php-64bit": "^7.4",
+        "php-64bit": "^7.4|^8.0",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "ext-json": "*",

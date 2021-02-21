@@ -9,6 +9,10 @@ You can use this package as foundation for a new project, or for educational pur
 ## Requirements
 This package requires **PHP 7.4+**
 
+Create the new Symfony application using Composer:
+```sh
+$ composer create-project mediagone/symfony-ddd-skeleton project_name
+```
 
 ## What's provided?
 
@@ -17,7 +21,7 @@ This package requires **PHP 7.4+**
 - Command and Query bus (CQRS)
 
 - Frontend & Backend example pages
-- Security routes : _login, logout_
+- Security routes : _login, logout, register, impersonate_
 
 ### Frontend
 - [Tailwind CSS](https://tailwindcss.com/)
