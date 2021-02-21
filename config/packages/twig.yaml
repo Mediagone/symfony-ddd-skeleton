@@ -2,6 +2,7 @@ twig:
     default_path: '%kernel.project_dir%/src/UI'
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    form_themes: [ 'Shared/Themes/Default/Base/Forms_theme.html.twig' ]
 
     date:
         format: "%date_format%"

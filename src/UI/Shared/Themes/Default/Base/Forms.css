@@ -1,62 +1,96 @@
 @layer base {
 
-    form.form input,
-    form.form button,
-    form.form select,
-    form.form textarea {
+    .form input,
+    .form button,
+    .form select,
+    .form textarea {
         @apply
         sm:text-sm
         rounded-md
         border-gray-300
         placeholder-gray-300
-        focus:ring-primary-300 focus:border-primary-300
+        focus:border-gray-400
+        focus:ring-0
+        ;
+    }
+
+    .form input[disabled],
+    .form button[disabled],
+    .form select[disabled],
+    .form textarea[disabled] {
+        @apply
+        sm:text-sm
+        bg-gray-200
         ;
     }
 
 
-    form.form .form-row {
+    .form .form-row {
         @apply
         flex flex-row
         justify-center
         ;
     }
 
-    form.form .form-col {
+    .form .form-col {
         @apply
         flex flex-col
         justify-center
         ;
     }
 
-    form.form .form-row + .form-row,
-    form.form .form-row + .form-col,
-    form.form .form-col + .form-row,
-    form.form .form-col + .form-col {
+    .form .form-row + .form-row,
+    .form .form-row + .form-col,
+    .form .form-col + .form-row,
+    .form .form-col + .form-col {
         @apply mt-4;
     }
 
 
-    form.form .form-col input,
-    form.form .form-col button,
-    form.form .form-col select,
-    form.form .form-col textarea {
+    .form .form-col input,
+    .form .form-col button,
+    .form .form-col select,
+    .form .form-col textarea {
         @apply
         w-full
         ;
     }
 
-    form.form .form-col p {
+
+    .form .--has-errors input,
+    .form .--has-errors select,
+    .form .--has-errors textarea {
+        @apply
+        border-red-500
+        ;
+    }
+
+
+
+    .form .form-col p {
         @apply
         text-sm
         pb-0
         ;
     }
 
-    form.form textarea {
+
+    .form .form__errors {
+        @apply
+        text-red-500
+        text-sm
+        ;
+    }
+
+
+
+
+
+    .form textarea {
         min-height: 5em;
     }
 
-    form.form .input-prefix {
+    .form .input-prefix {
         @apply
         inline-flex
         items-center
@@ -68,21 +102,21 @@
         ;
     }
 
-    form.form .input-prefix svg {
+    .form .input-prefix svg {
         height: 1.1em;
         @apply text-gray-300;
     }
 
-    form.form .input-prefix + input {
+    .form .input-prefix + input {
         @apply
         rounded-none rounded-r-md
         ;
     }
 
 
-    form.form button,
-    form.form [role="button"],
-    form.form input[type="submit"] {
+    .form button,
+    .form [role="button"],
+    .form input[type="submit"] {
         @apply
         inline-flex
         bg-white hover:bg-gray-50
@@ -92,19 +126,36 @@
         shadow-sm
         text-sm leading-4 font-medium text-gray-700
         focus:outline-none
-        focus:ring-2
-        focus:ring-offset-2
-        focus:ring-indigo-500
         cursor-pointer
         ;
     }
 
-    form.form input[type="submit"],
-    form.form button[type="submit"] {
+    .form input[type="submit"],
+    .form button[type="submit"] {
         @apply
-        bg-primary-200 hover:bg-primary-300
-        border-primary-300 hover:border-primary-400
+        bg-primary-500 hover:bg-primary-400
+        text-white
+        border-0
         ;
     }
+
+    .form label {
+        @apply
+        block
+        font-bold
+        text-lg
+        pt-4
+        pb-2
+        ;
+    }
+
+    .form div.label-important label {
+        @apply
+        text-2xl
+        pt-3
+        ;
+    }
+
+
 
 }

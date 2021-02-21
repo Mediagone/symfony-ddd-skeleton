@@ -15,20 +15,11 @@
 {#    <form class="form" action="{{ path('frontend_security_login') }}" method="post" novalidate="novalidate">#}
 
         <div class="form-col">
-            <h2>{{ 'entities.account.lastname.label'|trans }}</h2>
-{#            <input type="text" name="lastname" required="" autofocus="" value="{{ MODEL.Account.Lastname.toString }}" placeholder="Doe">#}
-            {{ form_widget(MODEL.AccountEditForm.lastname, {attr:{placeholder:'Doe'}}) }}
-            {{ form_errors(MODEL.AccountEditForm.lastname) }}
-            
-            <h3>{{ 'entities.account.forename.label'|trans }}</h3>
-{#            <input type="text" name="forename" required="" autofocus="" value="{{ MODEL.Account.Forename.toString }}" placeholder="John">#}
-            {{ form_widget(MODEL.AccountEditForm.forename, {attr:{placeholder:'John'}}) }}
-            {{ form_errors(MODEL.AccountEditForm.forename) }}
-        
-            <h2>{{ 'entities.account.email.label'|trans }}</h2>
-{#            <input type="email" name="email" required="" autofocus="" value="{{ MODEL.Account.Email.toString }}" placeholder="example@foo.com">#}
-            {{ form_widget(MODEL.AccountEditForm.email, {attr:{placeholder:'example@foo.com'}}) }}
-            {{ form_errors(MODEL.AccountEditForm.email) }}
+            <div class="flex justify-between space-x-8">
+                {{ form_row(MODEL.AccountEditForm.forename, { attr:{placeholder:'John'}, row_attr:{class:'flex-grow'} }) }}
+                {{ form_row(MODEL.AccountEditForm.lastname, { attr:{placeholder:'Doe'}, row_attr:{class:'flex-grow'} }) }}
+            </div>
+            {{ form_row(MODEL.AccountEditForm.email, { attr:{placeholder:'example@foo.com'} }) }}
         </div>
 
 
