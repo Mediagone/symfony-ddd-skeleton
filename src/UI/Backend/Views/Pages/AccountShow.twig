@@ -2,14 +2,14 @@
 {% expect 'App\\UI\\Backend\\Views\\Pages\\AccountShow' as MODEL %}
 
 
-{% block PAGE_TITLE %}Account - {{ MODEL.Account.Forename.toString ~ ' ' ~ MODEL.Account.Lastname.toString }}{% endblock %}
+{% block PAGE_TITLE %}Account - {{ MODEL.Account.Forename ~ ' ' ~ MODEL.Account.Lastname }}{% endblock %}
 
-{% block PAGE_H1 %}{{ MODEL.Account.Forename.toString ~ ' ' ~ MODEL.Account.Lastname.toString }}<span>Account details</span>{% endblock %}
+{% block PAGE_H1 %}{{ MODEL.Account.Forename ~ ' ' ~ MODEL.Account.Lastname }}<span>Account details</span>{% endblock %}
 
 
 {% block PAGE_CONTENT %}
 
-    <h1>{{ MODEL.Account.Forename.toString ~ ' ' ~ MODEL.Account.Lastname.toString }}<small class="text-base font-normal italic pl-4">Account details</small></h1>
+    <h1>{{ MODEL.Account.Forename ~ ' ' ~ MODEL.Account.Lastname }}<small class="text-base font-normal italic pl-4">Account details</small></h1>
 
     {{ form_start(MODEL.AccountEditForm, {attr:{class:'form', novalidate:'novalidate'}}) }}
 {#    <form class="form" action="{{ path('frontend_security_login') }}" method="post" novalidate="novalidate">#}

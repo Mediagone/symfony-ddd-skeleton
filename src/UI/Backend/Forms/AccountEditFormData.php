@@ -86,9 +86,9 @@ final class AccountEditFormData
     
     public function __construct(Account $account)
     {
-        $this->lastname = $account->getLastname()->toString();
-        $this->forename = $account->getForename()->toString();
-        $this->email = $account->getEmail()->toString();
+        $this->lastname = (string)$account->getLastname();
+        $this->forename = (string)$account->getForename();
+        $this->email = (string)$account->getEmail();
     }
     
     

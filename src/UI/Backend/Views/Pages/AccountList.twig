@@ -24,8 +24,8 @@
                 {% for id, account in MODEL.Accounts %}
                 <tr>
                     <td>{{ id }}</td>
-                    <td class="table--text-main"><a href="{{ path('backend_account_show', { accountId:account.Id }) }}">{{ account.Forename.toString ~ ' ' ~ account.Lastname.toString }}</a></td>
-                    <td class="">{{ account.Email.toString }}</td>
+                    <td class="table--text-main"><a href="{{ path('backend_account_show', { accountId:account.Id }) }}">{{ account.Forename ~ ' ' ~ account.Lastname }}</a></td>
+                    <td class="">{{ account.Email }}</td>
                     <td class="">{{ account.Id }}</td>
                 </tr>
                 {% else %}

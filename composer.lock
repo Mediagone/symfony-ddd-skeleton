@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb268dc1c0ab4060623508b575fd5597",
+    "content-hash": "dee47d30217b59fbf967ab6773591a4e",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1754,16 +1754,16 @@
         },
         {
             "name": "mediagone/common-types",
-            "version": "0.3.3",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediagone/common-types.git",
-                "reference": "d2ed0e6fb70a1ea9d0c54ab27e869e3a5426e132"
+                "reference": "4d2568d98a9dc27508d4c581755f6b17a6e09402"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediagone/common-types/zipball/d2ed0e6fb70a1ea9d0c54ab27e869e3a5426e132",
-                "reference": "d2ed0e6fb70a1ea9d0c54ab27e869e3a5426e132",
+                "url": "https://api.github.com/repos/Mediagone/common-types/zipball/4d2568d98a9dc27508d4c581755f6b17a6e09402",
+                "reference": "4d2568d98a9dc27508d4c581755f6b17a6e09402",
                 "shasum": ""
             },
             "require": {
@@ -1797,29 +1797,29 @@
             ],
             "support": {
                 "issues": "https://github.com/Mediagone/common-types/issues",
-                "source": "https://github.com/Mediagone/common-types/tree/0.3.3"
+                "source": "https://github.com/Mediagone/common-types/tree/0.4.0"
             },
-            "time": "2021-02-20T01:28:44+00:00"
+            "time": "2021-02-22T00:30:14+00:00"
         },
         {
             "name": "mediagone/common-types-doctrine",
-            "version": "0.3.2",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediagone/common-types-doctrine.git",
-                "reference": "a7a386d5488d7fea5aef4919aff2bbc337c13a37"
+                "reference": "60e8e11891dbc84449e8253b6c360f61156b5de0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediagone/common-types-doctrine/zipball/a7a386d5488d7fea5aef4919aff2bbc337c13a37",
-                "reference": "a7a386d5488d7fea5aef4919aff2bbc337c13a37",
+                "url": "https://api.github.com/repos/Mediagone/common-types-doctrine/zipball/60e8e11891dbc84449e8253b6c360f61156b5de0",
+                "reference": "60e8e11891dbc84449e8253b6c360f61156b5de0",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^2.7",
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "mediagone/common-types": "^0.3",
+                "mediagone/common-types": "^0.4",
                 "php": "^7.4|^8.0"
             },
             "require-dev": {
@@ -1849,9 +1849,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Mediagone/common-types-doctrine/issues",
-                "source": "https://github.com/Mediagone/common-types-doctrine/tree/0.3.2"
+                "source": "https://github.com/Mediagone/common-types-doctrine/tree/0.4.0"
             },
-            "time": "2021-02-05T16:37:41+00:00"
+            "time": "2021-02-22T00:37:02+00:00"
         },
         {
             "name": "mediagone/cqrs-bus",
@@ -1961,21 +1961,21 @@
         },
         {
             "name": "mediagone/small-uid",
-            "version": "0.1.2",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediagone/small-uid.git",
-                "reference": "ae3f368f35af54c418de2c72368d9235e37663b5"
+                "reference": "a4af6312939cc001ff83c4cdc1eb64dafcf8a4b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediagone/small-uid/zipball/ae3f368f35af54c418de2c72368d9235e37663b5",
-                "reference": "ae3f368f35af54c418de2c72368d9235e37663b5",
+                "url": "https://api.github.com/repos/Mediagone/small-uid/zipball/a4af6312939cc001ff83c4cdc1eb64dafcf8a4b2",
+                "reference": "a4af6312939cc001ff83c4cdc1eb64dafcf8a4b2",
                 "shasum": ""
             },
             "require": {
                 "ext-gmp": "*",
-                "mediagone/common-types": "^0.3",
+                "mediagone/common-types": "^0.4",
                 "php-64bit": "^7.4|^8.0"
             },
             "require-dev": {
@@ -2009,28 +2009,28 @@
             ],
             "support": {
                 "issues": "https://github.com/Mediagone/small-uid/issues",
-                "source": "https://github.com/Mediagone/small-uid/tree/0.1.2"
+                "source": "https://github.com/Mediagone/small-uid/tree/0.4.0"
             },
-            "time": "2021-02-21T22:47:07+00:00"
+            "time": "2021-02-22T00:47:56+00:00"
         },
         {
             "name": "mediagone/small-uid-doctrine",
-            "version": "0.1.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mediagone/small-uid-doctrine.git",
-                "reference": "391cfe7cad97bba4f89d6da46846a56534d37409"
+                "reference": "68349bcd50a8c61575151ebc81983a52c2ed379d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mediagone/small-uid-doctrine/zipball/391cfe7cad97bba4f89d6da46846a56534d37409",
-                "reference": "391cfe7cad97bba4f89d6da46846a56534d37409",
+                "url": "https://api.github.com/repos/Mediagone/small-uid-doctrine/zipball/68349bcd50a8c61575151ebc81983a52c2ed379d",
+                "reference": "68349bcd50a8c61575151ebc81983a52c2ed379d",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^2.7",
                 "ext-gmp": "*",
-                "mediagone/small-uid": "^0.1",
+                "mediagone/small-uid": "^0.4",
                 "php-64bit": "^7.4|^8.0"
             },
             "require-dev": {
@@ -2066,9 +2066,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Mediagone/small-uid-doctrine/issues",
-                "source": "https://github.com/Mediagone/small-uid-doctrine/tree/0.1.0"
+                "source": "https://github.com/Mediagone/small-uid-doctrine/tree/0.4.0"
             },
-            "time": "2021-02-20T16:39:03+00:00"
+            "time": "2021-02-22T00:51:54+00:00"
         },
         {
             "name": "mediagone/twig-powerpack",
@@ -10272,7 +10272,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php-64bit": "^7.4",
+        "php-64bit": "^7.4|^8.0",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "ext-json": "*"
