@@ -5,7 +5,7 @@
 {% apply spaceless %}
     {% if ITEM.header %}
         <div class="nav__title uppercase text-gray-300">
-            <span>{{ ITEM.header }}</span>
+            <span class="flex space-x-2"><span class="flex flex-grow items-center space-x-2 whitespace-nowrap">{{ ITEM.header|raw }}</span></span>
         </div>
     {% else %}
         {# or (ITEM.hasItems and is_current_path_or_child(ITEM.href))) #}
