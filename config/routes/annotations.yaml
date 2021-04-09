@@ -1,4 +1,4 @@
 controllers:
-    resource: ../../src/UI/
+    resource: ../../src/Application/
     type: annotation
 

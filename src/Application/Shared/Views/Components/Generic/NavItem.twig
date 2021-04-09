@@ -1,0 +1,41 @@
+{% expect 'App\\Application\\Shared\\Views\\Components\\Generic\\NavItem' as ITEM %}
+{% expect 'App\\Application\\Shared\\Views\\Components\\Generic\\Nav' as NAV %}
+{% expect nullable 'App\\Application\\Shared\\Views\\Components\\Generic\\NavItem' as PARENT %}
+
+{% apply spaceless %}
+    {% if ITEM.header %}
+        <div class="nav__title uppercase text-gray-300">
+            <span class="flex space-x-2"><span class="flex flex-grow items-center space-x-2 whitespace-nowrap">{{ ITEM.header|raw }}</span></span>
+        </div>
+    {% else %}
+        {# or (ITEM.hasItems and is_current_path_or_child(ITEM.href))) #}
+        {% set isActive = ITEM.href and is_current_path(ITEM.href) %}
+        {% if not isActive %}
+            {% for subHref in ITEM.subHrefs %}
+                {% if is_current_path(subHref) %}
+                    {% set isActive = true %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+
+        <div class="nav__item{% if ITEM.hasItems %} --with-submenu{% endif %}{% if isActive %} --active{% endif %} {{ ITEM.AttrClass }}">
+            {% if ITEM.href %}<a class="flex space-x-2" href="{{ ITEM.href }}">{% else %}<span class="flex items-center space-x-2">{% endif %}
+                <span class="flex flex-grow items-center space-x-2 whitespace-nowrap">{{ ITEM.label|raw }}</span>
+                {% if ITEM.badges is not empty %}
+                    <div class="nav__badges">
+                    {% for badge in ITEM.badges %}<div class="nav__badge {{ badge.AttrClass }}" {% if badge.Title %}title="{{ badge.Title }}"{% endif %}>{{ badge.Label }}</div>{% endfor %}
+                </div>
+                {% endif %}
+                {% if ITEM.href %}</a>{% else %}</span>{% endif %}
+
+            {% if ITEM.hasItems %}
+                <div class="nav__submenu {{ ITEM.SubmenuAttrClass }}">
+                    {% for subItem in ITEM.items %}
+                        {% include('Shared/Views/Components/Generic/NavItem.twig') with { ITEM: subItem, NAV:NAV, PARENT:ITEM } only %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+{% endapply %}
