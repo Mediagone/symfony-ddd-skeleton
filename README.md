@@ -6,7 +6,7 @@ You can use this package as foundation for a new project, or for educational pur
 
 
 
-## Requirements
+## Installation
 This package requires **PHP 7.4+**
 
 Create the new Symfony application using Composer:
