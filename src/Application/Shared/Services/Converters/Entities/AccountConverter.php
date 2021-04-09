@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace App\Application\Shared\Services\Converters;
+namespace App\Application\Shared\Services\Converters\Entities;
 
 use App\Domain\Core\Account\Account;
 use App\Domain\Core\Account\Query\OneAccount;
