@@ -41,29 +41,44 @@ final class AccountConverter implements ParamConverterInterface
     
     public function supports(ParamConverter $configuration) : bool
     {
-        return $configuration->getClass() === Account::class && $configuration->getName() === 'account';
+        return $configuration->getClass() === Account::class;
     }
     
     
     public function apply(Request $request, ParamConverter $configuration)
     {
-        try {
-            $accountId = $request->get('accountId');
-            $uid = SmallUid::fromString($accountId);
+        $paramName = $configuration->getName();
+
+        if ($request->get($paramName.'Id')) {
+            $account = $this->findById($request->get($paramName.'Id'));
         }
-        catch (InvalidArgumentException $ex) {
-            throw new NotFoundHttpException($ex->getMessage());
+        else {
+            $account = null;
         }
         
-        /** @var Account|null $account */
-        $account = $this->queryBus->find(
-            OneAccount::asEntity()->byId($uid)
-        );
         if (! $account && $configuration->isOptional() === false) {
             throw new NotFoundHttpException('Account not found.');
         }
         
         $request->attributes->set($configuration->getName(), $account);
+    }
+
+
+
+    //========================================================================================================
+    // Helpers
+    //========================================================================================================
+
+    private function findById(string $id) : ?Account
+    {
+        try {
+            return $this->queryBus->find(
+                OneAccount::asEntity()->byId(SmallUid::fromString($id))
+            );
+        }
+        catch (InvalidArgumentException $ex) {
+            return null;
+        }
     }
     
     
