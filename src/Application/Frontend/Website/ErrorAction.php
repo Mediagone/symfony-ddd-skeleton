@@ -38,7 +38,7 @@ final class ErrorAction
                 break;
         }
         
-        return $responses->template("Frontend/Views/Pages/$templateName.twig", [
+        return $responses->template("Frontend/Website/Views/Pages/$templateName.twig", [
             'MODEL' => new Error($flattenException->getStatusCode()),
         ]);
     }

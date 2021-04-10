@@ -20,7 +20,7 @@ final class AboutAction
     
     public function __invoke(ControllerResponses $responses, QueryBus $queryBus) : Response
     {
-        return $responses->template('Frontend/Views/Pages/About.twig', [
+        return $responses->template('Frontend/Website/Views/Pages/About.twig', [
             'MODEL' => new About(),
         ]);
     }
