@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace App\Application\Frontend;
+namespace App\Application\Frontend\Website;
 
-use App\Application\Frontend\Views\Pages\Error;
+use App\Application\Frontend\Website\Views\Pages\Error;
 use App\Application\Shared\Services\ControllerResponses;
 use Symfony\Component\ErrorHandler\ErrorRenderer\ErrorRendererInterface;
 use Symfony\Component\HttpFoundation\Response;

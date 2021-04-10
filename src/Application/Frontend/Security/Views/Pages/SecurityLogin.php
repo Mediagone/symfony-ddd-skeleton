@@ -1,19 +1,19 @@
 <?php declare(strict_types=1);
 
-namespace App\Application\Frontend\Views\Pages;
+namespace App\Application\Frontend\Security\Views\Pages;
 
 
-final class Error
+final class SecurityLogin
 {
     //========================================================================================================
     // Properties
     //========================================================================================================
 
-    private int $statusCode;
+    private string $lastUsername;
     
-    public function getStatusCode() : int
+    public function getLastUsername() : string
     {
-        return $this->statusCode;
+        return $this->lastUsername;
     }
     
     
@@ -21,10 +21,10 @@ final class Error
     //========================================================================================================
     // Constructor
     //========================================================================================================
-    
-    public function __construct(int $statusCode)
+
+    public function __construct(string $lastUsername)
     {
-        $this->statusCode = $statusCode;
+        $this->lastUsername = $lastUsername;
     }
     
     

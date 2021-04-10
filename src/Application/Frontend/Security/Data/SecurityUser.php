@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace App\Application\Frontend\Data;
+namespace App\Application\Frontend\Security\Data;
 
 use App\Domain\Core\Account\Account;
 use Serializable;

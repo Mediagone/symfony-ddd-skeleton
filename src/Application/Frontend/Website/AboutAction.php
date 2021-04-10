@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace App\Application\Frontend;
+namespace App\Application\Frontend\Website;
 
-use App\Application\Frontend\Views\Pages\About;
+use App\Application\Frontend\Website\Views\Pages\About;
 use App\Application\Shared\Services\ControllerResponses;
 use Mediagone\CQRS\Bus\Domain\Query\QueryBus;
 use Symfony\Component\HttpFoundation\Response;

@@ -1,14 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace App\Application\Frontend\Views\Pages;
+namespace App\Application\Frontend\Security\Views\Pages;
 
 
-final class About
+final class SecurityRegister
 {
     //========================================================================================================
     // Properties
     //========================================================================================================
-    
     
     
     

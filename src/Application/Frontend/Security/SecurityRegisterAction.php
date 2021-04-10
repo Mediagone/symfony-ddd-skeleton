@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace App\Application\Frontend;
+namespace App\Application\Frontend\Security;
 
-use App\Application\Frontend\Views\Pages\SecurityRegister;
+use App\Application\Frontend\Security\Views\Pages\SecurityRegister;
 use App\Application\Shared\Services\ControllerFlashes;
 use App\Application\Shared\Services\ControllerResponses;
 use Symfony\Component\HttpFoundation\Response;
@@ -47,7 +47,7 @@ final class SecurityRegisterAction
 
     public function __invoke(?UserInterface $user, ControllerResponses $responses, AuthenticationUtils $authenticationUtils) : Response
     {
-        return $responses->template('Frontend/Views/Pages/SecurityRegister.twig', [
+        return $responses->template('Frontend/Security/Views/Pages/SecurityRegister.twig', [
             //'HEADER' => new PageHeader(null),
             'MODEL' => new SecurityRegister(),
         ]);

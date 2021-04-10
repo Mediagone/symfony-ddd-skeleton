@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace App\Application\Frontend\Services;
+namespace App\Application\Frontend\Security\Services;
 
+use App\Application\Frontend\Security\Data\SecurityUser;
 use App\Domain\Core\Account\Query\OneAccount;
-use App\Application\Frontend\Data\SecurityUser;
 use Mediagone\Common\Types\Web\EmailAddress;
 use Mediagone\CQRS\Bus\Domain\Query\QueryBus;
 use Symfony\Component\HttpFoundation\RedirectResponse;

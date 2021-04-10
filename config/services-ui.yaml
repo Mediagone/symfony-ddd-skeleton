@@ -15,7 +15,7 @@ services:
     # Tag controllers classes to make sure services can be injected as action arguments.
     app.controllers:
         namespace: App\Application\
-        resource: '../src/Application/*/*Action.php'
+        resource: '../src/Application/**/*Action.php'
         tags: ['controller.service_arguments']
     
     # Load third-party Twig extensions.
@@ -25,7 +25,7 @@ services:
 
     # Loads some UI's classes as services
     App\Application\:
-        resource: '../src/Application/*/{Forms,Services}'
+        resource: '../src/Application/**/{Forms,Services}'
 
     # Use custom error controller
     Symfony\Component\ErrorHandler\ErrorRenderer\ErrorRendererInterface: '@twig.error_renderer.html'

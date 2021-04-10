@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace App\Application\Frontend;
+namespace App\Application\Frontend\Security;
 
-use App\Application\Frontend\Views\Pages\SecurityLogin;
+use App\Application\Frontend\Security\Views\Pages\SecurityLogin;
 use App\Application\Shared\Services\ControllerFlashes;
 use App\Application\Shared\Services\ControllerResponses;
 use Symfony\Component\HttpFoundation\Response;
@@ -53,7 +53,7 @@ final class SecurityLoginAction
         
         $this->handleAuthenticationError();
         
-        return $responses->template('Frontend/Views/Pages/SecurityLogin.twig', [
+        return $responses->template('Frontend/Security/Views/Pages/SecurityLogin.twig', [
             'MODEL' => new SecurityLogin($this->auth->getLastUsername()),
         ]);
     }
