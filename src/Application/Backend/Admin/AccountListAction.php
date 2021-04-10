@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace App\Application\Backend;
+namespace App\Application\Backend\Admin;
 
-use App\Domain\Core\Account\Query\ManyAccount;
-use App\Application\Backend\Views\Pages\AccountList;
+use App\Application\Backend\Admin\Views\Pages\AccountList;
 use App\Application\Shared\Services\ControllerResponses;
+use App\Domain\Core\Account\Query\ManyAccount;
 use Mediagone\CQRS\Bus\Domain\Query\QueryBus;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -23,7 +23,7 @@ final class AccountListAction
     {
         $users = $queryBus->find(ManyAccount::asEntity());
 
-        return $responses->template('Backend/Views/Pages/AccountList.twig', [
+        return $responses->template('Backend/Admin/Views/Pages/AccountList.twig', [
             'MODEL' => new AccountList($users),
         ]);
     }

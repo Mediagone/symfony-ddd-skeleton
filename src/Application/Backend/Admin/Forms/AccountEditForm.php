@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace App\Application\Backend\Forms;
+namespace App\Application\Backend\Admin\Forms;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;

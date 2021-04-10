@@ -1,21 +1,30 @@
 <?php declare(strict_types=1);
 
-namespace App\Application\Backend\Views\Pages;
+namespace App\Application\Backend\Admin\Views\Pages;
 
 use App\Domain\Core\Account\Account;
+use Symfony\Component\Form\FormView;
 
 
-final class AccountList
+final class AccountShow
 {
     //========================================================================================================
     // Properties
     //========================================================================================================
     
-    private array $accounts;
+    private Account $account;
     
-    public function getAccounts() : array
+    public function getAccount() : Account
     {
-        return $this->accounts;
+        return $this->account;
+    }
+    
+    
+    private FormView $accountEditForm;
+    
+    public function getAccountEditForm() : FormView
+    {
+        return $this->accountEditForm;
     }
     
     
@@ -23,13 +32,13 @@ final class AccountList
     //========================================================================================================
     // Constructor
     //========================================================================================================
-
-
-    public function __construct(array $accounts)
+    
+    public function __construct(Account $account, FormView $form)
     {
-        $this->accounts = (static fn(Account... $accounts) => $accounts)(...$accounts);
+        $this->account = $account;
+        $this->accountEditForm = $form;
     }
     
-
-
+    
+    
 }

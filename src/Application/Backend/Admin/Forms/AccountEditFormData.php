@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace App\Application\Backend\Forms;
+namespace App\Application\Backend\Admin\Forms;
 
 use App\Domain\Core\Account\Account;
 use App\Application\Shared\Services\Form\Validation\ValueValid;

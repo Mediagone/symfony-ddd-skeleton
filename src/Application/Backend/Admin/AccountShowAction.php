@@ -1,14 +1,14 @@
 <?php declare(strict_types=1);
 
-namespace App\Application\Backend;
+namespace App\Application\Backend\Admin;
 
-use App\Domain\Core\Account\Account;
-use App\Domain\Core\Account\Command\ModifyAccount;
-use App\Application\Backend\Forms\AccountEditForm;
-use App\Application\Backend\Forms\AccountEditFormData;
-use App\Application\Backend\Views\Pages\AccountShow;
+use App\Application\Backend\Admin\Forms\AccountEditForm;
+use App\Application\Backend\Admin\Forms\AccountEditFormData;
+use App\Application\Backend\Admin\Views\Pages\AccountShow;
 use App\Application\Shared\Services\ControllerFlashes;
 use App\Application\Shared\Services\ControllerResponses;
+use App\Domain\Core\Account\Account;
+use App\Domain\Core\Account\Command\ModifyAccount;
 use Exception;
 use Mediagone\Common\Types\Text\Name;
 use Mediagone\Common\Types\Web\EmailAddress;
@@ -60,7 +60,7 @@ final class AccountShowAction
             }
         }
         
-        return $responses->template('Backend/Views/Pages/AccountShow.twig', [
+        return $responses->template('Backend/Admin/Views/Pages/AccountShow.twig', [
             'MODEL' => new AccountShow($account, $form->createView()),
         ]);
     }
